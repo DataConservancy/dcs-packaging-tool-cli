@@ -82,7 +82,7 @@
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <manifestEntries>
-                                        <Main-Class>org.dataconservancy.packaging.apt.AutomatedPackageTool</Main-Class>
+                                        <Main-Class>org.dataconservancy.packaging.tool.cli.AutomatedPackageTool</Main-Class>
                                         <Code-Revision>${buildNumber}</Code-Revision>
                                     </manifestEntries>
                                 </transformer>
@@ -134,11 +134,6 @@
                 <version>1.7.10</version>
             </dependency>
             <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>4.2.6.RELEASE</version>
-            </dependency>
-            <dependency>
                 <groupId>org.dataconservancy.pkgtool</groupId>
                 <artifactId>dcs-packaging-tool-api</artifactId>
                 <version>1.0.3</version>
@@ -148,7 +143,12 @@
                 <artifactId>dcs-packaging-tool-model-builder</artifactId>
                 <version>1.0.3</version>
             </dependency>
-        </dependencies>
+            <dependency>
+                <groupId>org.dataconservancy.packaging.shared</groupId>
+                <artifactId>dcs-packaging-shared</artifactId>
+                <scope>compile</scope>
+                <version>1.0.3</version>
+            </dependency>        </dependencies>
     </dependencyManagement>
     <!-- Dependencies =============================================== -->
     <!-- Provided  =================================================== -->
@@ -163,8 +163,9 @@
             <artifactId>slf4j-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.dataconservancy.pkgtool</groupId>
@@ -174,7 +175,12 @@
             <groupId>org.dataconservancy.pkgtool</groupId>
             <artifactId>dcs-packaging-tool-model-builder</artifactId>
         </dependency>
-    </dependencies>
+        <dependency>
+            <groupId>org.dataconservancy.packaging.shared</groupId>
+            <artifactId>dcs-packaging-shared</artifactId>
+            <scope>compile</scope>
+            <version>1.0.3</version>
+        </dependency>    </dependencies>
     <!-- Runtime  ==================================================== -->
     <!-- Test ======================================================== -->
 </project>

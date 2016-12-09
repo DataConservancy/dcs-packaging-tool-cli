@@ -1,0 +1,1385 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+dcterms:medium  a           <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The material or physical carrier of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                dcterms:PhysicalResource ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Medium"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:PhysicalMedium ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                dcterms:format , <http://purl.org/dc/elements/1.1/format> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#medium-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:format  a            <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The file format, physical medium, or dimensions of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Format"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:MediaTypeOrExtent ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/format> ;
+        dcterms:description  "Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME]."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#formatT-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:RightsStatement
+        a                   <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A statement about the intellectual property rights (IPR) held in or over a Resource, a legal document giving official permission to do something with a resource, or a statement about access rights."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Rights Statement"@en ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#RightsStatement-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:Jurisdiction  a     <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The extent or range of judicial, law enforcement, or other authority."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Jurisdiction"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                dcterms:LocationPeriodOrJurisdiction ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#Jurisdiction-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:MediaTypeOrExtent
+        a                   <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A media type or extent."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Media Type or Extent"@en ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#MediaTypeOrExtent-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:subject  a           <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The topic of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Subject"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/subject> ;
+        dcterms:description  "Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#subjectT-002> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2012-06-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:alternative  a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "An alternative name for the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Alternative Title"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                dcterms:title , <http://purl.org/dc/elements/1.1/title> ;
+        dcterms:description  "The distinction between titles and alternative titles is application-specific."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#alternative-003> ;
+        dcterms:issued       "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2010-10-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:tableOfContents
+        a                   <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A list of subunits of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Table Of Contents"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                dcterms:description , <http://purl.org/dc/elements/1.1/description> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#tableOfContents-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:date  a              <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A point or period of time associated with an event in the lifecycle of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Date"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/date> ;
+        dcterms:description  "Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF]."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#dateT-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:UDC  a              <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of conceptual resources specified by the Universal Decimal Classification."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "UDC"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://www.udcc.org/> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#UDC-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:BibliographicResource
+        a                   <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A book, article, or other documentary resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Bibliographic Resource"@en ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#BibliographicResource-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:license  a          <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A legal document giving official permission to do something with the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "License"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:LicenseDocument ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/rights> , dcterms:rights ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#license-002> ;
+        dcterms:issued      "2004-06-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:source  a            <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A related resource from which the described resource is derived."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Source"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/source> , dcterms:relation ;
+        dcterms:description  "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#sourceT-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:isReferencedBy
+        a                   <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A related resource that references, cites, or otherwise points to the described resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Is Referenced By"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/relation> , dcterms:relation ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#isReferencedBy-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:hasFormat  a        <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A related resource that is substantially the same as the pre-existing described resource, but in another format."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Has Format"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                dcterms:relation , <http://purl.org/dc/elements/1.1/relation> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#hasFormat-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:MESH  a             <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of labeled concepts specified by the Medical Subject Headings."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MeSH"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://www.nlm.nih.gov/mesh/meshhome.html> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#MESH-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:LocationPeriodOrJurisdiction
+        a                   <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A location, period of time, or jurisdiction."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Location, Period, or Jurisdiction"@en ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#LocationPeriodOrJurisdiction-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:replaces  a         <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A related resource that is supplanted, displaced, or superseded by the described resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Replaces"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/relation> , dcterms:relation ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#replaces-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:mediator  a          <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "An entity that mediates access to the resource and for whom the resource is intended or useful."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Mediator"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:AgentClass ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                dcterms:audience ;
+        dcterms:description  "In an educational context, a mediator might be a parent, teacher, teaching assistant, or care-giver."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#mediator-003> ;
+        dcterms:issued       "2001-05-21"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:extent  a           <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The size or duration of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Extent"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:SizeOrDuration ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/format> , dcterms:format ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#extent-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:rightsHolder  a     <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A person or organization owning or managing rights over the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Rights Holder"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:Agent ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#rightsHolder-002> ;
+        dcterms:issued      "2004-06-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:Agent  a             <http://www.w3.org/2000/01/rdf-schema#Class> , dcterms:AgentClass ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A resource that acts or has the power to act."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Agent"@en ;
+        dcterms:description  "Examples of Agent include person, organization, and software agent."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#Agent-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:LicenseDocument
+        a                   <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A legal document giving official permission to do something with a Resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "License Document"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                dcterms:RightsStatement ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#LicenseDocument-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:hasVersion  a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A related resource that is a version, edition, or adaptation of the described resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Has Version"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/relation> , dcterms:relation ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#hasVersion-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:accrualPolicy
+        a                   <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The policy governing the addition of items to a collection."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://purl.org/dc/dcmitype/Collection> ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Accrual Policy"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:Policy ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#accrualPolicy-003> ;
+        dcterms:issued      "2005-06-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2010-10-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:created  a          <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Date of creation of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Date Created"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/date> , dcterms:date ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#created-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:references  a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A related resource that is referenced, cited, or otherwise pointed to by the described resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "References"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/relation> , dcterms:relation ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#references-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:creator  a           <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "An entity primarily responsible for making the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Creator"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:Agent ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                dcterms:contributor , <http://purl.org/dc/elements/1.1/creator> ;
+        dcterms:description  "Examples of a Creator include a person, an organization, or a service."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#creatorT-002> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2010-10-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2002/07/owl#equivalentProperty>
+                <http://xmlns.com/foaf/0.1/maker> .
+
+dcterms:accessRights  a      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Information about who can access the resource or an indication of its security status."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Access Rights"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:RightsStatement ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/rights> , dcterms:rights ;
+        dcterms:description  "Access Rights may include information regarding access or restrictions based on privacy, security, or other policies."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#accessRights-002> ;
+        dcterms:issued       "2003-02-15"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:Policy  a           <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Policy"@en ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#Policy-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:RFC5646  a           <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of tags constructed according to RFC 5646 for the identification of languages."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RFC 5646"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://www.ietf.org/rfc/rfc5646.txt> ;
+        dcterms:description  "RFC 5646 obsoletes RFC 4646."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#RFC5646-001> ;
+        dcterms:issued       "2010-10-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:title  a            <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A name given to the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Title"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/title> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#titleT-002> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2010-10-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:relation  a          <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A related resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Relation"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/relation> ;
+        dcterms:description  "Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. "@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#relationT-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:AgentClass  a        <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A group of agents."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Agent Class"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        dcterms:description  "Examples of Agent Class include groups seen as classes, such as students, women, charities, lecturers."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#AgentClass-003> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2012-06-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:Frequency  a        <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A rate at which something recurs."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Frequency"@en ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#Frequency-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:dateCopyrighted
+        a                   <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Date of copyright."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Date Copyrighted"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                dcterms:date , <http://purl.org/dc/elements/1.1/date> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#dateCopyrighted-002> ;
+        dcterms:issued      "2002-07-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:LCSH  a             <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of labeled concepts specified by the Library of Congress Subject Headings."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LCSH"@en ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#LCSH-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:abstract  a         <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A summary of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Abstract"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                dcterms:description , <http://purl.org/dc/elements/1.1/description> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#abstract-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:contributor  a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "An entity responsible for making contributions to the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Contributor"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:Agent ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/contributor> ;
+        dcterms:description  "Examples of a Contributor include a person, an organization, or a service."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#contributorT-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2010-10-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:Point  a            <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of points in space defined by their geographic coordinates according to the DCMI Point Encoding Scheme."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DCMI Point"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://dublincore.org/documents/dcmi-point/> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#Point-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:publisher  a         <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "An entity responsible for making the resource available."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Publisher"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:Agent ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/publisher> ;
+        dcterms:description  "Examples of a Publisher include a person, an organization, or a service."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#publisherT-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2010-10-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:RFC4646  a           <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of tags constructed according to RFC 4646 for the identification of languages."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RFC 4646"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://www.ietf.org/rfc/rfc4646.txt> ;
+        dcterms:description  "RFC 4646 obsoletes RFC 3066."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#RFC4646-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:ISO639-3  a         <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of three-letter codes listed in ISO 639-3 for the representation of names of languages."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISO 639-3"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://www.sil.org/iso639-3/> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#ISO639-3-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:SizeOrDuration
+        a                    <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A dimension or extent, or a time taken to play or execute."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Size or Duration"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                dcterms:MediaTypeOrExtent ;
+        dcterms:description  "Examples include a number of pages, a specification of length, width, and breadth, or a period in hours, minutes, and seconds."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#SizeOrDuration-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:conformsTo  a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "An established standard to which the described resource conforms."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Conforms To"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:Standard ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/relation> , dcterms:relation ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#conformsTo-003> ;
+        dcterms:issued      "2001-05-21"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:accrualPeriodicity
+        a                   <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The frequency with which items are added to a collection."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://purl.org/dc/dcmitype/Collection> ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Accrual Periodicity"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:Frequency ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#accrualPeriodicity-003> ;
+        dcterms:issued      "2005-06-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2010-10-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:Standard  a         <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A basis for comparison; a reference point against which other things can be evaluated."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Standard"@en ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#Standard-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:isReplacedBy  a     <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A related resource that supplants, displaces, or supersedes the described resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Is Replaced By"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/relation> , dcterms:relation ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#isReplacedBy-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:IMT  a              <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of media types specified by the Internet Assigned Numbers Authority."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "IMT"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://www.iana.org/assignments/media-types/> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#IMT-004> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:identifier  a        <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "An unambiguous reference to the resource within a given context."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Identifier"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/identifier> ;
+        dcterms:description  "Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. "@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#identifierT-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:hasPart  a          <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A related resource that is included either physically or logically in the described resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Has Part"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/relation> , dcterms:relation ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#hasPart-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:accrualMethod
+        a                   <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The method by which items are added to a collection."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://purl.org/dc/dcmitype/Collection> ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Accrual Method"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:MethodOfAccrual ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#accrualMethod-003> ;
+        dcterms:issued      "2005-06-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2010-10-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:type  a              <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The nature or genre of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Type"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/type> ;
+        dcterms:description  "Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#typeT-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:ISO3166  a          <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of codes listed in ISO 3166-1 for the representation of names of countries."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISO 3166"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://www.iso.org/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#ISO3166-004> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:dateAccepted  a      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Date of acceptance of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Date Accepted"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/date> , dcterms:date ;
+        dcterms:description  "Examples of resources to which a Date Accepted may be relevant are a thesis (accepted by a university department) or an article (accepted by a journal)."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#dateAccepted-002> ;
+        dcterms:issued       "2002-07-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:coverage  a          <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Coverage"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:LocationPeriodOrJurisdiction ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/coverage> ;
+        dcterms:description  "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#coverageT-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:MediaType  a        <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A file format or physical medium."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Media Type"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                dcterms:MediaTypeOrExtent ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#MediaType-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:W3CDTF  a           <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of dates and times constructed according to the W3C Date and Time Formats Specification."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "W3C-DTF"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://www.w3.org/TR/NOTE-datetime> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#W3CDTF-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:ISO639-2  a         <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The three-letter alphabetic codes listed in ISO639-2 for the representation of names of languages."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISO 639-2"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://lcweb.loc.gov/standards/iso639-2/langhome.html> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#ISO639-2-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:educationLevel
+        a                   <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A class of entity, defined in terms of progression through an educational or training context, for which the described resource is intended."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Audience Education Level"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:AgentClass ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                dcterms:audience ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#educationLevel-002> ;
+        dcterms:issued      "2002-07-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:audience  a         <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A class of entity for whom the resource is intended or useful."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Audience"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:AgentClass ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#audience-003> ;
+        dcterms:issued      "2001-05-21"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:isRequiredBy  a     <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A related resource that requires the described resource to support its function, delivery, or coherence."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Is Required By"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/relation> , dcterms:relation ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#isRequiredBy-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:available  a        <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Date (often a range) that the resource became or will become available."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Date Available"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/date> , dcterms:date ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#available-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:isPartOf  a         <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A related resource in which the described resource is physically or logically included."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Is Part Of"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/relation> , dcterms:relation ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#isPartOf-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:isVersionOf  a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A related resource of which the described resource is a version, edition, or adaptation."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Is Version Of"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                dcterms:relation , <http://purl.org/dc/elements/1.1/relation> ;
+        dcterms:description  "Changes in version imply substantive changes in content rather than differences in format."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#isVersionOf-003> ;
+        dcterms:issued       "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:PhysicalResource
+        a                   <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A material thing."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Physical Resource"@en ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#PhysicalResource-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:URI  a              <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of identifiers constructed according to the generic syntax for Uniform Resource Identifiers as specified by the Internet Engineering Task Force."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "URI"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://www.ietf.org/rfc/rfc3986.txt> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#URI-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:DDC  a              <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of conceptual resources specified by the Dewey Decimal Classification."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DDC"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://www.oclc.org/dewey/> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#DDC-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:rights  a            <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Information about rights held in and over the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Rights"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:RightsStatement ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/rights> ;
+        dcterms:description  "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#rightsT-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:modified  a         <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Date on which the resource was changed."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Date Modified"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                dcterms:date , <http://purl.org/dc/elements/1.1/date> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#modified-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:MethodOfInstruction
+        a                   <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A process that is used to engender knowledge, attitudes, and skills."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Method of Instruction"@en ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#MethodOfInstruction-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:instructionalMethod
+        a                    <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Instructional Method"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:MethodOfInstruction ;
+        dcterms:description  "Instructional Method will typically include ways of presenting instructional materials or conducting instructional activities, patterns of learner-to-learner and learner-to-instructor interactions, and mechanisms by which group and individual levels of learning are measured.  Instructional methods include all aspects of the instruction and learning processes from planning and implementation through evaluation and feedback."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#instructionalMethod-002> ;
+        dcterms:issued       "2005-06-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:ProvenanceStatement
+        a                   <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Provenance Statement"@en ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#ProvenanceStatement-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:isFormatOf  a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A related resource that is substantially the same as the described resource, but in another format."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Is Format Of"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/relation> , dcterms:relation ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#isFormatOf-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:spatial  a          <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Spatial characteristics of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Spatial Coverage"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:Location ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                dcterms:coverage , <http://purl.org/dc/elements/1.1/coverage> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#spatial-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:RFC1766  a          <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of tags, constructed according to RFC 1766, for the identification of languages."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RFC 1766"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://www.ietf.org/rfc/rfc1766.txt> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#RFC1766-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:temporal  a         <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Temporal characteristics of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Temporal Coverage"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:PeriodOfTime ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                dcterms:coverage , <http://purl.org/dc/elements/1.1/coverage> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#temporal-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:issued  a           <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Date of formal issuance (e.g., publication) of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Date Issued"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                dcterms:date , <http://purl.org/dc/elements/1.1/date> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#issued-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:MethodOfAccrual
+        a                   <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A method by which resources are added to a collection."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Method of Accrual"@en ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#MethodOfAccrual-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:DCMIType  a         <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DCMI Type Vocabulary"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://purl.org/dc/dcmitype/> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#DCMIType-005> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2012-06-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:RFC3066  a           <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of tags constructed according to RFC 3066 for the identification of languages."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RFC 3066"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://www.ietf.org/rfc/rfc3066.txt> ;
+        dcterms:description  "RFC 3066 has been obsoleted by RFC 4646."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#RFC3066-002> ;
+        dcterms:issued       "2002-07-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:TGN  a              <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of places specified by the Getty Thesaurus of Geographic Names."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "TGN"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://www.getty.edu/research/tools/vocabulary/tgn/index.html> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#TGN-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:bibliographicCitation
+        a                    <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A bibliographic reference for the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                dcterms:BibliographicResource ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Bibliographic Citation"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/identifier> , dcterms:identifier ;
+        dcterms:description  "Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#bibliographicCitation-002> ;
+        dcterms:issued       "2003-02-15"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:Period  a           <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of time intervals defined by their limits according to the DCMI Period Encoding Scheme."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DCMI Period"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://dublincore.org/documents/dcmi-period/> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#Period-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:Location  a         <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A spatial region or named place."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Location"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                dcterms:LocationPeriodOrJurisdiction ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#Location-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:provenance  a        <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Provenance"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:ProvenanceStatement ;
+        dcterms:description  "The statement may include a description of any changes successive custodians made to the resource."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#provenance-002> ;
+        dcterms:issued       "2004-09-20"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:LCC  a              <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of conceptual resources specified by the Library of Congress Classification."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LCC"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://lcweb.loc.gov/catdir/cpso/lcco/lcco.html> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#LCC-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:description  a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "An account of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Description"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/description> ;
+        dcterms:description  "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#descriptionT-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:language  a          <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A language of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Language"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dcterms:LinguisticSystem ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/language> ;
+        dcterms:description  "Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646]."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#languageT-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:PeriodOfTime  a     <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "An interval of time that is named or defined by its start and end dates."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Period of Time"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                dcterms:LocationPeriodOrJurisdiction ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#PeriodOfTime-001> ;
+        dcterms:issued      "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:  dcterms:modified  "2012-06-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:publisher  <http://purl.org/dc/aboutdcmi#DCMI> ;
+        dcterms:title      "DCMI Metadata Terms - other"@en ;
+        <http://purl.org/vocab/vann/preferredNamespaceUri>
+                "http://purl.org/dc/terms/" .
+
+dcterms:dateSubmitted
+        a                    <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Date of submission of the resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Date Submitted"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/date> , dcterms:date ;
+        dcterms:description  "Examples of resources to which a Date Submitted may be relevant are a thesis (submitted to a university department) or an article (submitted to a journal)."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#dateSubmitted-002> ;
+        dcterms:issued       "2002-07-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified     "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:valid  a            <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Date (often a range) of validity of a resource."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Date Valid"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/date> , dcterms:date ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#valid-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:requires  a         <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A related resource that is required by the described resource to support its function, delivery, or coherence."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Requires"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://purl.org/dc/elements/1.1/relation> , dcterms:relation ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#requires-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en .
+
+dcterms:NLM  a              <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of conceptual resources specified by the National Library of Medicine Classification."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NLM"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://wwwcf.nlm.nih.gov/class/> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#NLM-002> ;
+        dcterms:issued      "2005-06-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:LinguisticSystem
+        a                    <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A system of signs, symbols, sounds, gestures, or rules used in communication."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Linguistic System"@en ;
+        dcterms:description  "Examples include written, spoken, sign, and computer languages."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#LinguisticSystem-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:PhysicalMedium
+        a                    <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A physical material or carrier."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Physical Medium"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                dcterms:MediaType ;
+        dcterms:description  "Examples include paper, canvas, or DVD."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#PhysicalMedium-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:Box  a              <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The set of regions in space defined by their geographic coordinates according to the DCMI Box Encoding Scheme."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DCMI Box"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#seeAlso>
+                <http://dublincore.org/documents/dcmi-box/> ;
+        dcterms:hasVersion  <http://dublincore.org/usage/terms/history/#Box-003> ;
+        dcterms:issued      "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:modified    "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+dcterms:FileFormat  a        <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A digital resource format."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+                dcterms: ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "File Format"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                dcterms:MediaType ;
+        dcterms:description  "Examples include the formats defined by the list of Internet Media Types."@en ;
+        dcterms:hasVersion   <http://dublincore.org/usage/terms/history/#FileFormat-001> ;
+        dcterms:issued       "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
