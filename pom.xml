@@ -15,8 +15,11 @@
     </parent>
     <!-- Properties ================================================== -->
     <properties></properties>
+
     <!-- Profiles  =================================================== -->
+
     <!-- Build ======================================================= -->
+
     <build>
         <pluginManagement>
             <plugins>
@@ -120,7 +123,9 @@
             </plugin>
         </plugins>
     </build>
+
     <!-- Dependency Management ====================================== -->
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -146,14 +151,15 @@
             <dependency>
                 <groupId>org.dataconservancy.packaging.shared</groupId>
                 <artifactId>dcs-packaging-shared</artifactId>
-                <scope>compile</scope>
-                <version>1.0.3</version>
-            </dependency>        </dependencies>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
+
     <!-- Dependencies =============================================== -->
-    <!-- Provided  =================================================== -->
-    <!-- Compile  ==================================================== -->
+
     <dependencies>
+
         <dependency>
             <groupId>args4j</groupId>
             <artifactId>args4j</artifactId>
@@ -163,11 +169,6 @@
             <artifactId>slf4j-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
             <groupId>org.dataconservancy.pkgtool</groupId>
             <artifactId>dcs-packaging-tool-api</artifactId>
         </dependency>
@@ -175,12 +176,27 @@
             <groupId>org.dataconservancy.pkgtool</groupId>
             <artifactId>dcs-packaging-tool-model-builder</artifactId>
         </dependency>
+
+    <!-- Provided  =================================================== -->
+
+    <!-- Compile  ==================================================== -->
+
         <dependency>
             <groupId>org.dataconservancy.packaging.shared</groupId>
             <artifactId>dcs-packaging-shared</artifactId>
             <scope>compile</scope>
-            <version>1.0.3</version>
-        </dependency>    </dependencies>
+        </dependency>
+
     <!-- Runtime  ==================================================== -->
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+    </dependencies>
+
     <!-- Test ======================================================== -->
+
 </project>

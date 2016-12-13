@@ -16,9 +16,13 @@
 
 package org.dataconservancy.packaging.tool.cli;
 
-import org.apache.jena.rdf.model.*;
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.ResourceFactory;
+import org.apache.jena.rdf.model.Statement;
 
-import org.dataconservancy.packaging.shared.ContentProvider;
+import org.dataconservancy.packaging.shared.AbstractContentProvider;
 import org.dataconservancy.packaging.tool.model.ipm.FileInfo;
 import org.dataconservancy.packaging.tool.model.ipm.Node;
 import org.slf4j.Logger;
@@ -28,19 +32,21 @@ import java.net.URI;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * Implementation of ContentProvider for RDF sourced data.
- * Created by Ben Trumbore on 12/1/2016.
+ * @author Ben Trumbore (wbt3@cornell.edu).
  */
-public class RdfContentProvider extends ContentProvider {
+public class RdfContentProvider extends AbstractContentProvider {
 
     private Logger  LOG = LoggerFactory.getLogger(RdfContentProvider.class);
     private Model   domainObjects = null;
     private URI     contentPath;
 
     /**
-     * Create a content provider that can be passed to IpmPackager.buildPackage.
+     * Create a content provider that can be passed to
+     * {@link org.dataconservancy.packaging.shared.IpmPackager#buildPackage}.
      * @param domainObjs The RDF model of the domain objects.
      * @param contentURI A URL to the files corresponding to the domain model.
      */
@@ -57,11 +63,17 @@ public class RdfContentProvider extends ContentProvider {
         return domainObjects;
     }
 
+    // Define property names that are found on some RDF nodes.
+    private static final String HAS_TYPE      = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
+    private static final String HAS_TITLE     = "http://dataconservancy.org/business-object-model#hasTitle";
+    private static final String METADATA_FOR  = "http://dataconservancy.org/business-object-model#metadataFor";
+    private static final String IS_MEMBER_OF  = "http://dataconservancy.org/business-object-model#isMemberOf";
+
     // Define properties that will be inspected for some RDF nodes.
-    private static Property hasType     = ResourceFactory.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
-    private static Property hasTitle    = ResourceFactory.createProperty("http://dataconservancy.org/business-object-model#hasTitle");
-    private static Property metadataFor = ResourceFactory.createProperty("http://dataconservancy.org/business-object-model#metadataFor");
-    private static Property isMemberOf  = ResourceFactory.createProperty("http://dataconservancy.org/business-object-model#isMemberOf");
+    private static final Property hasType     = ResourceFactory.createProperty(HAS_TYPE);
+    private static final Property hasTitle    = ResourceFactory.createProperty(HAS_TITLE);
+    private static final Property metadataFor = ResourceFactory.createProperty(METADATA_FOR);
+    private static final Property isMemberOf  = ResourceFactory.createProperty(IS_MEMBER_OF);
 
     /*
      * TODO - Update doc throughout this method
@@ -73,7 +85,7 @@ public class RdfContentProvider extends ContentProvider {
      */
     public Node getIpmModel() {
         // Must use an array to allow root node to be set inside lambda function below.
-        final Node[] root = new Node[1];
+        final AtomicReference<Node> root = new AtomicReference<Node>();
 
         String msgFmt = "Creating %s IPM node named '%s' for domain object %s";
 
@@ -114,22 +126,22 @@ public class RdfContentProvider extends ContentProvider {
                 Property prop = isImage ? metadataFor : isMemberOf;
                 String parentID = subject.getProperty(prop).getObject().toString();
                 assignFileInfo(title, parentID, contentPath, domainObjects, n, true);
-                assignParentNode(n, root[0]);
+                assignParentNode(n, root.get());
             }
             else if (isFolder) {
                 LOG.info(String.format(msgFmt, "directory", title, subject.getURI()));
                 String parentID = subject.getProperty(isMemberOf).getObject().toString();
                 assignFileInfo(title, parentID, contentPath, domainObjects, n, false);
-                assignParentNode(n, root[0]);
+                assignParentNode(n, root.get());
             }
             else { // root folder, type == "Collection"
                 LOG.info(String.format(msgFmt, "root directory", title, subject.getURI()));
                 assignFileInfo(title, null, contentPath, domainObjects, n, false);
-                root[0] = n;
+                root.set(n);
             }
         });
 
-        return root[0];
+        return root.get();
     }
 
     /**
@@ -150,10 +162,11 @@ public class RdfContentProvider extends ContentProvider {
         Path fullPath = Paths.get(contentPath + "/" + localPath);
 
         FileInfo info = new FileInfo(fullPath);
-        if (isFile)
+        if (isFile) {
             info.setIsFile(true);
-        else
+        } else {
             info.setIsDirectory(true);
+        }
         node.setFileInfo(info);
     }
 
@@ -173,10 +186,11 @@ public class RdfContentProvider extends ContentProvider {
         String newPath  = parentName + "/" + pathTail;
 
         Statement grandparent = parent.getProperty(isMemberOf);
-        if (grandparent != null)
+        if (grandparent != null) {
             return getPath(newPath, grandparent.getObject().toString(), domainObjects);
-        else
+        } else {
             return newPath;
+        }
     }
 
     /**

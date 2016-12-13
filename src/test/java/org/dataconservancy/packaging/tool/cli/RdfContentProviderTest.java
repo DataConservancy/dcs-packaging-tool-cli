@@ -33,7 +33,7 @@ import static org.junit.Assert.assertNotNull;
 
 /**
  * Tests for validating RDF-sourced content in a DC package.
- * Created by Ben Trumbore on 12/6/2016.
+ * @author Ben Trumbore (wbt3@cornell.edu).
  */
 public class RdfContentProviderTest {
 
