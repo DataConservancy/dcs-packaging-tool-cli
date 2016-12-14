@@ -40,7 +40,7 @@ import java.util.concurrent.atomic.AtomicReference;
  */
 public class RdfContentProvider extends AbstractContentProvider {
 
-    private Logger  LOG = LoggerFactory.getLogger(RdfContentProvider.class);
+    private Logger  logger = LoggerFactory.getLogger(RdfContentProvider.class);
     private Model   domainObjects = null;
     private URI     contentPath;
 
@@ -50,7 +50,7 @@ public class RdfContentProvider extends AbstractContentProvider {
      * @param domainObjs The RDF model of the domain objects.
      * @param contentURI A URL to the files corresponding to the domain model.
      */
-    public RdfContentProvider(Model domainObjs, URI contentURI) {
+    public RdfContentProvider(final Model domainObjs, final URI contentURI) {
         domainObjects = domainObjs;
         contentPath = contentURI;
     }
@@ -75,19 +75,19 @@ public class RdfContentProvider extends AbstractContentProvider {
     private static final Property metadataFor = ResourceFactory.createProperty(METADATA_FOR);
     private static final Property isMemberOf  = ResourceFactory.createProperty(IS_MEMBER_OF);
 
-    /*
-     * TODO - Update doc throughout this method
+    /**
      * We manually build the IPM tree here. Fundamentally, we're doing three things:
      * 1) Creating "directory" nodes that correspond to a domain object.
      * 2) Creating "content" nodes that correspond to a domain object that
      *    describes associated content.
      * 3) Arranging these nodes into a tree structure of our liking.
+     * @return The root node of the IPM model for this content provider.
      */
     public Node getIpmModel() {
-        // Must use an array to allow root node to be set inside lambda function below.
+        // Must use an Atomic Reference to allow root node to be set inside lambda function below.
         final AtomicReference<Node> root = new AtomicReference<Node>();
 
-        String msgFmt = "Creating %s IPM node named '%s' for domain object %s";
+        final String msgFmt = "Creating %s IPM node named '%s' for domain object %s";
 
         // For each subject resource that is not anonymous, create a node.
         // - If the node type is an Image or File, then it will be a content node.
@@ -95,47 +95,45 @@ public class RdfContentProvider extends AbstractContentProvider {
         // It is assumed that all folders will precede their child nodes/folders.
         domainObjects.listSubjects().forEachRemaining(subject -> {
             if (subject.isAnon()) {
-                LOG.debug("Skipping IPM node creation for anonymous resource '{}'", subject.getId().toString());
+                logger.debug("Skipping IPM node creation for anonymous resource '{}'", subject.getId().toString());
                 return;
             }
 
-            URI u = URI.create(subject.getURI());
+            final URI u = URI.create(subject.getURI());
 
             // Hash URIs do not get their own node; they will be considered to be a single node.
             // TODO - Is this needed for JenaModel input? (copied from buildModelTree)
             if (u.getFragment() != null) {
-                LOG.debug("Skipping IPM node creation for hash URI resource '{}'", subject.getURI());
+                logger.debug("Skipping IPM node creation for hash URI resource '{}'", subject.getURI());
                 return;
             }
 
             // What type of node is this?  What is its name?
-            String type  = subject.getProperty(hasType ).getObject().toString();
-            String title = subject.getProperty(hasTitle).getObject().toString();
-            boolean isImage  = type.equals("http://dataconservancy.org/business-object-model#Metadata");
-            boolean isFile   = type.equals("http://dataconservancy.org/business-object-model#File");
-            boolean isFolder = type.equals("http://dataconservancy.org/business-object-model#DataItem");
+            final String type  = subject.getProperty(hasType ).getObject().toString();
+            final String title = subject.getProperty(hasTitle).getObject().toString();
+            final boolean isImage  = type.equals("http://dataconservancy.org/business-object-model#Metadata");
+            final boolean isFile   = type.equals("http://dataconservancy.org/business-object-model#File");
+            final boolean isFolder = type.equals("http://dataconservancy.org/business-object-model#DataItem");
 
             // Create the new package tree node and insert it into the tree.
-            Node n = new Node(u);
+            final Node n = new Node(u);
             n.setDomainObject(u);
 
             // Assign node file info and parent depending on node type.
             // Note that file info must be assigned before finding/assigning parent.
             if (isImage || isFile) {
-                LOG.info(String.format(msgFmt, "file", title, subject.getURI()));
-                Property prop = isImage ? metadataFor : isMemberOf;
-                String parentID = subject.getProperty(prop).getObject().toString();
+                logger.info(String.format(msgFmt, "file", title, subject.getURI()));
+                final Property prop = isImage ? metadataFor : isMemberOf;
+                final String parentID = subject.getProperty(prop).getObject().toString();
                 assignFileInfo(title, parentID, contentPath, domainObjects, n, true);
                 assignParentNode(n, root.get());
-            }
-            else if (isFolder) {
-                LOG.info(String.format(msgFmt, "directory", title, subject.getURI()));
-                String parentID = subject.getProperty(isMemberOf).getObject().toString();
+            } else if (isFolder) {
+                logger.info(String.format(msgFmt, "directory", title, subject.getURI()));
+                final String parentID = subject.getProperty(isMemberOf).getObject().toString();
                 assignFileInfo(title, parentID, contentPath, domainObjects, n, false);
                 assignParentNode(n, root.get());
-            }
-            else { // root folder, type == "Collection"
-                LOG.info(String.format(msgFmt, "root directory", title, subject.getURI()));
+            } else { // root folder, type == "Collection"
+                logger.info(String.format(msgFmt, "root directory", title, subject.getURI()));
                 assignFileInfo(title, null, contentPath, domainObjects, n, false);
                 root.set(n);
             }
@@ -154,14 +152,14 @@ public class RdfContentProvider extends AbstractContentProvider {
      * @param node The node for which the FileInfo is being created.
      * @param isFile True if the node represents a file, False if it is a folder.
      */
-    private void assignFileInfo(String fileName, String parentID, URI contentPath,
-                                       Model domainObjects, Node node, boolean isFile) {
-        String localPath = (parentID == null)
+    private void assignFileInfo(final String fileName, final String parentID, final URI contentPath,
+                                final Model domainObjects, final Node node, final boolean isFile) {
+        final String localPath = (parentID == null)
                 ? fileName
                 : getPath(fileName, parentID, domainObjects);
-        Path fullPath = Paths.get(contentPath + "/" + localPath);
+        final Path fullPath = Paths.get(contentPath + "/" + localPath);
 
-        FileInfo info = new FileInfo(fullPath);
+        final FileInfo info = new FileInfo(fullPath);
         if (isFile) {
             info.setIsFile(true);
         } else {
@@ -180,12 +178,12 @@ public class RdfContentProvider extends AbstractContentProvider {
      * @param domainObjects The domain model.
      * @return The complete path from domain model root to the provided leaf.
      */
-    private String getPath(String pathTail, String parentID, Model domainObjects) {
-        Resource parent = domainObjects.getResource(parentID);
-        String parentName = parent.getProperty(hasTitle).getObject().toString();
-        String newPath  = parentName + "/" + pathTail;
+    private String getPath(final String pathTail, final String parentID, final Model domainObjects) {
+        final Resource parent = domainObjects.getResource(parentID);
+        final String parentName = parent.getProperty(hasTitle).getObject().toString();
+        final String newPath  = parentName + "/" + pathTail;
 
-        Statement grandparent = parent.getProperty(isMemberOf);
+        final Statement grandparent = parent.getProperty(isMemberOf);
         if (grandparent != null) {
             return getPath(newPath, grandparent.getObject().toString(), domainObjects);
         } else {
@@ -198,14 +196,14 @@ public class RdfContentProvider extends AbstractContentProvider {
      * @param node The node for which a parent is found and assigned.
      * @param root The root node of the IPM tree.
      */
-    private void assignParentNode(Node node, Node root) {
+    private void assignParentNode(final Node node, final Node root) {
         // Find the file system paths to the provided root and target nodes.
         String nodeLoc = node.getFileInfo().getLocation().getPath();
         nodeLoc = nodeLoc.replaceFirst("^/(.:/)", "$1"); // Remove leading "/" on Windows
-        Path nodePath = Paths.get(nodeLoc);
+        final Path nodePath = Paths.get(nodeLoc);
         String rootLoc = root.getFileInfo().getLocation().getPath();
         rootLoc = rootLoc.replaceFirst("^/(.:/)", "$1"); // Remove leading "/" on Windows
-        Path rootPath = Paths.get(rootLoc);
+        final Path rootPath = Paths.get(rootLoc);
 
         // Find the relative file system path between the root and target nodes.
         Path relPath  = rootPath.relativize(nodePath);
@@ -215,8 +213,8 @@ public class RdfContentProvider extends AbstractContentProvider {
         // matches the first name in the remaining relative path.
         Node parent = root;
         while (relPath.getNameCount() > 1) {
-            String name = relPath.getName(0).toString();
-            List<Node> children = parent.getChildren();
+            final String name = relPath.getName(0).toString();
+            final List<Node> children = parent.getChildren();
             Node match = null;
             for (Node child : children) {
                 if (child.getFileInfo().getName().equals(name)) {
@@ -224,8 +222,9 @@ public class RdfContentProvider extends AbstractContentProvider {
                     break;
                 }
             }
-            if (match == null)
+            if (match == null) {
                 throw new RuntimeException("Expected IPM model folder '" + name + "' does not exist!");
+            }
             parent = match;
             relPath = relPath.subpath(1, relPath.getNameCount());
         }

@@ -42,33 +42,33 @@ public class RdfContentProviderTest {
     // Compare the package contents to that of the original source.
     @Test
     public void testCreateRdfPackage() throws Exception {
-        String dataResource = "/testCreateRdfPackage/";
-        String jenaResource = dataResource + "state/DOMAIN_OBJECTS";
-        String bagResource  = dataResource + "Hanh-test/data/bin";
+        final String dataResource = "/testCreateRdfPackage/";
+        final String jenaResource = dataResource + "state/DOMAIN_OBJECTS";
+        final String bagResource  = dataResource + "Hanh-test/data/bin";
 
         // Read Jena model from sample DOMAIN_OBJECTS file.
-        String jenaFile = RdfContentProviderTest.class.getResource(jenaResource).getPath();
-        Model jenaModel = ModelFactory.createDefaultModel();
+        final String jenaFile = RdfContentProviderTest.class.getResource(jenaResource).getPath();
+        final Model jenaModel = ModelFactory.createDefaultModel();
         RDFDataMgr.read(jenaModel, jenaFile, Lang.TTL);
         assertEquals(148, jenaModel.size());
 
         // Metadata
-        InputStream metadataStream =
+        final InputStream metadataStream =
                 RdfContentProviderTest.class.getResourceAsStream("/metadata.properties");
 
         // Read package generation parameters from a resource file.
-        InputStream paramStream =
+        final InputStream paramStream =
                 RdfContentProviderTest.class.getResourceAsStream("/PackageGenerationParams.properties");
 
         String contentPath = RdfContentProviderTest.class.getResource(bagResource).getPath();
         contentPath = contentPath.replaceFirst("^/(.:/)", "$1"); // Remove leading "/" on Windows
-        URI contentURI = new URI(contentPath);
+        final URI contentURI = new URI(contentPath);
 
-        RdfContentProvider contentProvider = new RdfContentProvider(jenaModel, contentURI);
+        final RdfContentProvider contentProvider = new RdfContentProvider(jenaModel, contentURI);
 
         // Create the package
-        IpmPackager packager = new IpmPackager();
-        org.dataconservancy.packaging.tool.api.Package pkg =
+        final IpmPackager packager = new IpmPackager();
+        final org.dataconservancy.packaging.tool.api.Package pkg =
                 packager.buildPackage(contentProvider, metadataStream, paramStream);
 
         // TODO - Test the package contents
