@@ -13,7 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.dataconservancy.packaging.apt;
+
+package org.dataconservancy.packaging.tool.cli;
 
 import org.apache.commons.compress.archivers.ArchiveStreamFactory;
 import org.dataconservancy.packaging.tool.api.PackagingFormat;
@@ -41,6 +42,7 @@ import java.util.Properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 /**
  * Created by jrm on 8/10/16.
  *
