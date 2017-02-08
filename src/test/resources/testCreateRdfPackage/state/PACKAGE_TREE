@@ -1,0 +1,617 @@
+_:b0    a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:3fe6a343-ee8d-41cd-a8ea-8f2ac18de765" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1450837036000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "image/jpeg" , "info:pronom/fmt/43" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/IMG_9342.jpg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "a10b9f296fc81625670149e6bc81dc75" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1450837036000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "fefe94b0b2b538125e93ddf0ac3862fa3bc305e3" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "2839211"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "IMG_9342.jpg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Metadata" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:1b562eca-1560-494e-a7cb-1ea12d577c60" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b2    a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1450816645000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "application/octet-stream" , "info:pronom/fmt/394" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "file:///Users/hvu/Desktop/installers/.DS_Store" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "69cb9348b924eee650a22c3310e7726c" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1450816645000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "4f6d8aed7e4455cb1a2dfb4c522e9fb282716f0f" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "6148"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          ".DS_Store" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b3 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:b07fd05a-75f1-479f-bd62-69897d199d60" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                true .
+
+_:b4    a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:e8874a9f-8feb-44cc-8268-23e915f9a694" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1450837289000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "image/jpeg" , "info:pronom/fmt/43" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/IMG_9189.jpg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "8f2fd86ac4a7510a19164cf7a0c2473e" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1450837290000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "296577284dd122dada365621f48f99292d5343db" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "4991733"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "IMG_9189.jpg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Metadata" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:22a5a25c-1768-4fb8-8c1a-bca8cf6541fb" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b5    a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:60d556a1-d6fb-4bb8-95c8-67a4ee16e382" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1410370967000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "image/jpeg" , "info:pronom/fmt/43" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/IMG_0960.jpg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "587b30ebffba5fc3aafba5fc07c692cb" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1410370967000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "cb0d46201ff0889d55b601b045bbe517efdac6ad" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "8255112"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "IMG_0960.jpg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Metadata" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:f9f994e6-84f8-49b2-91a0-d7fb73ce12c7" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b6    a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:a6a9155d-bed4-4b08-9724-c5c900797cba" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1450816111000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "application/octet-stream" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/installers/DC%20Package%20Tool-1.0.2.dmg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "075e29d9cc9e761da8c59c541966e434" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1450816117000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "905a81ede30173a327a4af67a0af8bbdb94e1690" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "97350112"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "DC Package Tool-1.0.2.dmg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#File" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b3 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:8e2bad77-5497-4d2f-944b-4a8a5b615ce3" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b7    a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:b8e5b58b-c862-4b1d-9205-138541f8f7f7" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1450837081000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "image/jpeg" , "info:pronom/fmt/43" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/IMG_9313.jpg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "22f519a5f364f4e140683c68d0308471" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1450837081000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "471b63effbd07bdbe6b60bf17407e66fe988d940" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "6247196"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "IMG_9313.jpg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Metadata" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:615cdeb5-5463-4823-a74b-1a260be72d4f" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b1    a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasChild>
+                ( _:b8 _:b9 _:b5 _:b10 _:b11 _:b4 _:b12 _:b13 _:b14 _:b7 _:b15 _:b0 _:b16 _:b17 _:b3 ) ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1410370775000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1451448928000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "544"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          true ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "To Print" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          false
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Collection" ;
+        <http://dataconservancy.org/internal-package-model/isRoot>
+                true ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:1ba3f19d-0fe1-41c8-9e79-e031f16862ec" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b16   a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:f6de992a-9015-4439-b32b-4560f401ac07" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1450836163000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "image/jpeg" , "info:pronom/fmt/43" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/IMG_9380.jpg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "16e177a02698445a755b55001863a6b6" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1450836163000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "bfc2efe1ce7f53d81284f16ea036723427c1206a" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "4813513"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "IMG_9380.jpg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Metadata" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:85c51845-ab63-477c-9c40-979ab21e87e1" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b12   a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:75817a2d-218b-419e-a822-a5ea0142a3f7" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1450837203000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "info:pronom/fmt/43" , "image/jpeg" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/IMG_9202.jpg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "38e9b597759246b1a7f854cb9ebf408c" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1450837203000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "82b85b18fbd03e7916504ec943805cfc452257bb" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "5758095"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "IMG_9202.jpg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Metadata" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:e6881cbe-ef45-4e3e-8e2b-88f2872c5be6" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b17   a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:001edf7f-ce2b-4bd3-9f73-cc5781de9697" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1450836938000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "info:pronom/fmt/43" , "image/jpeg" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/IMG_9455.jpg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "2258e99295b8d5596e82a7d21e10a39c" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1450836939000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "03a350cb506e24de14478c3832fb7d2555ca498a" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "7294566"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "IMG_9455.jpg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Metadata" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:fbbc413d-a100-4e00-bc6c-f1b1d503b3aa" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b8    a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:e7f03dde-c1c2-48bc-877c-e064f6bbe5f6" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1410370905000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "info:pronom/fmt/43" , "image/jpeg" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/IMG_0858.jpg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "0d1d19e02c3eeb98bb156776928515d2" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1410370906000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "cfcff5e07575654a6f9c4c9592eca28d25ee86d5" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "6437931"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "IMG_0858.jpg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Metadata" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:24f5b1ec-1514-4d78-ac79-7e17bb29361a" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b10   a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:38f4987b-3326-4a19-a62b-6006d62e16ab" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1410371031000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "image/jpeg" , "info:pronom/fmt/43" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/IMG_1159.jpg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "bba18e142aa70656c22fbd629c917fa8" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1410371031000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "b859ec0b90e6b8a15a15476872ebf7482aee8f52" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "4029906"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "IMG_1159.jpg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Metadata" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:ee7bc224-4442-4572-88eb-4b2ba82cb816" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b15   a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:e1f21e7b-56b2-42dc-83d2-a77f666ba5ba" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1450837069000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "info:pronom/fmt/43" , "image/jpeg" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/IMG_9321.jpg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "41d6c795547769a18cf34eaf5383e006" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1450837069000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "f80a5c75a3daef05ece366d09f2dca0e8b90e2e1" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "4358654"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "IMG_9321.jpg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Metadata" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:37d66a74-d0d0-417c-b454-a2524ba74c0d" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b13   a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:5bf67cd9-cd86-406e-8bc5-ddaec21e8c35" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1450837141000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "image/jpeg" , "info:pronom/fmt/43" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "file:///Users/hvu/Desktop/To%20Print/IMG_9248.jpg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "0bd8564eb51fa6ce95021bb3e706b779" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1450837141000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "1230e179f34d71cb3c6fbf8c897052a718b88095" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "6609200"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "IMG_9248.jpg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Metadata" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:afca3b24-79d2-4984-bfdf-7d1400e1d1b1" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                true .
+
+_:b3    a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasChild>
+                ( _:b2 _:b6 ) ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:565b3ab7-8bee-4666-9f3f-0a0221650e15" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1450816633000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/installers/" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1450816645000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "136"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          true ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "installers" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          false
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#DataItem" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:b6a203b0-2cc0-42cc-8a72-0dc8058f8da0" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b9    a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:1424ac26-711a-4202-a719-439e632159d2" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1410370777000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "image/jpeg" , "info:pronom/fmt/43" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/IMG_0899.jpg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "475355780b2415396bcfff5dec636a36" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1410370778000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "fd3defe536773907b785406a786033536a7f6e23" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "5718363"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "IMG_0899.jpg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Metadata" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:470d9357-f4c4-45a3-a8d6-e0ae95312c4d" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b11   a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:19748fc3-f776-44b5-b952-523cff4086b3" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1450837235000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "image/jpeg" , "info:pronom/fmt/43" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/IMG_9184.jpg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "3c9f230a8311006acadf99a8b10d23df" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1450837235000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "229b9989e89880860db9b04550ae2ee281c88978" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "6565477"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "IMG_9184.jpg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Metadata" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:7e11998f-a011-4dc1-b7b2-12d7ce595c27" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .
+
+_:b14   a       <http://dataconservancy.org/internal-package-model/IPMNode> ;
+        <http://dataconservancy.org/internal-package-model/hasDomainObject>
+                "urn:uuid:312a3ac3-e7bb-48a2-aa54-18514a18284d" ;
+        <http://dataconservancy.org/internal-package-model/hasFileInfo>
+                [ a       <http://dataconservancy.org/internal-package-model/FileInfo> ;
+                  <http://dataconservancy.org/internal-package-model/hasCreatedDate>
+                          "1450837108000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasFormat>
+                          "info:pronom/fmt/43" , "image/jpeg" ;
+                  <http://dataconservancy.org/internal-package-model/hasLocation>
+                          "bag://Hanh-test/data/bin/To%20Print/IMG_9302.jpg" ;
+                  <http://dataconservancy.org/internal-package-model/hasMD5Checksum>
+                          "810dc1c82add9c1d2feaa78bf6cdf386" ;
+                  <http://dataconservancy.org/internal-package-model/hasModifiedDate>
+                          "1450837108000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/hasSHA1Checksum>
+                          "4780fe40192a2a63465e4094ce3419ac80fa9ca2" ;
+                  <http://dataconservancy.org/internal-package-model/hasSize>
+                          "6022116"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                  <http://dataconservancy.org/internal-package-model/isDirectory>
+                          false ;
+                  <http://dataconservancy.org/ns/types/hasName>
+                          "IMG_9302.jpg" ;
+                  <http://dataconservancy.org/ns/types/isByteStream>
+                          true
+                ] ;
+        <http://dataconservancy.org/internal-package-model/hasNodeType>
+                "http://dataconservancy.org/ptg-profiles/dcs-bo-1.0#Metadata" ;
+        <http://dataconservancy.org/internal-package-model/hasParent>
+                _:b1 ;
+        <http://dataconservancy.org/ns/types/hasId>
+                "urn:uuid:95905a4c-6a1b-4d40-bbf8-4e7cc84be5c7" ;
+        <http://dataconservancy.org/ns/types/isIgnored>
+                false .

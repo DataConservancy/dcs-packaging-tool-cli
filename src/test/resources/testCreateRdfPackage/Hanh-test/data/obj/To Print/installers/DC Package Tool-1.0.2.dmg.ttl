@@ -1,0 +1,10 @@
+@prefix bom:   <http://dataconservancy.org/business-object-model#> .
+
+<bag://Hanh-test/data/bin/To%20Print/installers/DC%20Package%20Tool-1.0.2.dmg>
+        a                    bom:File ;
+        bom:hasCreateDate    "2015-12-22T20:28:31Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        bom:hasFormat        "application/octet-stream" ;
+        bom:hasModifiedDate  "2015-12-22T20:28:37Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        bom:hasSize          "97350112"^^<http://www.w3.org/2001/XMLSchema#long> ;
+        bom:hasTitle         "DC Package Tool-1.0.2.dmg" ;
+        bom:isMemberOf       <bag://Hanh-test/data/obj/To%20Print/installers.ttl> .

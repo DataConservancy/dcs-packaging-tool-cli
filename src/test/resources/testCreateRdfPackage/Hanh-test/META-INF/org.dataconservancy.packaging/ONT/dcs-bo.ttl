@@ -1,0 +1,666 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+_:b0    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasTitle> .
+
+_:b1    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://xmlns.com/foaf/0.1/name> .
+
+<http://dataconservancy.org/business-object-model#hasPublisher>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying a publisher for a Project."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#Project> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has publisher"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+_:b2    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasFixity> .
+
+_:b3    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasStartDate> .
+
+<http://dataconservancy.org/business-object-model#MetadataFile>
+        a       <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                  <http://www.w3.org/2002/07/owl#cardinality>
+                          "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+                  <http://www.w3.org/2002/07/owl#onProperty>
+                          <http://dataconservancy.org/business-object-model#isMemberOf>
+                ] .
+
+_:b4    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://xmlns.com/foaf/0.1/name> .
+
+_:b5    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasDepositDate> .
+
+<http://dataconservancy.org/business-object-model#hasBusinessId>
+        a       <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying a business identifier for the BusinessObject."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#BusinessObject> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has business id"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+<http://dataconservancy.org/business-object-model#hasTitle>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying a title for a Project, Collection, DataItem or File."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#ContentEntity> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has title"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+_:b6    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasDescription> .
+
+<http://dataconservancy.org/business-object-model#ContentEntity>
+        a       <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                [ a       <http://www.w3.org/2002/07/owl#Class> ;
+                  <http://www.w3.org/2002/07/owl#intersectionOf>
+                          ( _:b6 _:b0 )
+                ] .
+
+<http://dataconservancy.org/business-object-model#hasDescription>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying a description for a Project, Collection, DataItem or File."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#ContentEntity> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has description"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+<http://dataconservancy.org/business-object-model#NamedPerson>
+        a       <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                  <http://www.w3.org/2002/07/owl#cardinality>
+                          "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+                  <http://www.w3.org/2002/07/owl#onProperty>
+                          <http://xmlns.com/foaf/0.1/name>
+                ] .
+
+<http://dataconservancy.org/business-object-model#hasStartDate>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying the start date for the Project."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#Project> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has start date"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#dateTime> .
+
+_:b7    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://xmlns.com/foaf/0.1/name> .
+
+_:b8    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#allValuesFrom>
+                <http://dataconservancy.org/business-object-model#CollectionAggregator> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#isMemberOf> .
+
+_:b9    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasFixity> .
+
+_:b10   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#maxCardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasPublicationDate> .
+
+<http://dataconservancy.org/business-object-model#hasAlternateId>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying an alternate identifier for the BusinessObject."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#BusinessObject> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has alternate id"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+<http://dataconservancy.org/business-object-model#hasCreateDate>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying the create date for a Collection, DataItem or File."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#MemberEntity> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has create date"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://dataconservancy.org/business-object-model#hasCitableLocator>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying a citable locator for the Collection or DataItem."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#DataAggregator> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has citable locator"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#anyURI> .
+
+<http://dataconservancy.org/business-object-model#hasPrincipalInvestigator>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying a principal investigator for a Project."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#Project> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has principal investigator"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+<http://dataconservancy.org/business-object-model#hasContact>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying a contact for the Collection or DataItem."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#DataAggregator> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has contact"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://dataconservancy.org/business-object-model#NamedPerson> .
+
+<http://dataconservancy.org/business-object-model#hasDiscipline>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying a discipline for a Collection."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#Collection> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has discipline"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+<http://dataconservancy.org/business-object-model#Person>
+        a       <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A Person is a person."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Person"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dataconservancy.org/business-object-model#NamedPerson> , <http://dataconservancy.org/business-object-model#BusinessObject> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                [ a       <http://www.w3.org/2002/07/owl#Class> ;
+                  <http://www.w3.org/2002/07/owl#intersectionOf>
+                          ( _:b11 )
+                ] .
+
+<http://dataconservancy.org/business-object-model#hasFundingEntity>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying a funding entity for a Project."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#Project> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has funding entity"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+_:b12   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#allValuesFrom>
+                <http://dataconservancy.org/business-object-model#DataItem> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#isMemberOf> .
+
+_:b13   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasFixity> .
+
+<http://dataconservancy.org/business-object-model#hasUsedStorage>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying the amount of storage used by the Project."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#Project> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has used storage"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#long> .
+
+_:b14   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#maxCardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasEndDate> .
+
+<http://dataconservancy.org/business-object-model#MemberEntity>
+        a       <http://www.w3.org/2002/07/owl#Class> .
+
+_:b15   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#allValuesFrom>
+                <http://dataconservancy.org/business-object-model#Collection> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#isMemberOf> .
+
+<http://dataconservancy.org/business-object-model#hasSize>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying the size of a File"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#File> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has size"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#long> .
+
+<http://dataconservancy.org/business-object-model#hasEndDate>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying the end date for the Project."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#Project> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has end date"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://dataconservancy.org/business-object-model#hasContentModel>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying the content model for a DataItem."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#DataItem> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has content model"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+<http://dataconservancy.org/business-object-model#hasMember>
+        a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Links an aggregating object to a constituent member."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#ContentEntity> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has member"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://dataconservancy.org/business-object-model#MemberEntity> .
+
+_:b16   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#allValuesFrom>
+                <http://dataconservancy.org/business-object-model#Collection> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasMember> .
+
+<http://dataconservancy.org/business-object-model#hasCreator>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying a creator for the Collection or DataItem."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#DataAggregator> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has creator"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://dataconservancy.org/business-object-model#NamedPerson> .
+
+<http://dataconservancy.org/business-object-model>
+        a                  <http://www.w3.org/2002/07/owl#Ontology> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Ontology for the Data Conservancy Business Object Model"@en ;
+        dcterms:modified   "2015-11-03"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dcterms:publisher  <http://www.dataconservancy.org/> ;
+        dcterms:title      "Data Conservancy Business Object Model Ontology"@en ;
+        <http://www.w3.org/2002/07/owl#imports>
+                <http://xmlns.com/foaf/0.1/> ;
+        <http://www.w3.org/2002/07/owl#versionInfo>
+                "2015/11/03" .
+
+_:b17   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasMember> .
+
+_:b18   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#isMemberOf> .
+
+<http://dataconservancy.org/business-object-model#hasPublicationDate>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying the publication date for a Collection."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#Collection> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has publication date"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#dateTime> .
+
+_:b19   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasUsedStorage> .
+
+_:b20   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#allValuesFrom>
+                <http://dataconservancy.org/business-object-model#DataAggregator> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasMember> .
+
+_:b21   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://xmlns.com/foaf/0.1/name> .
+
+<http://dataconservancy.org/business-object-model#hasFormat>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying a format for a DataItem."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#File> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has format"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+<http://dataconservancy.org/business-object-model#File>
+        a       <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A File is a sequence of binary data. "@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "File"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dataconservancy.org/business-object-model#MemberEntity> , <http://dataconservancy.org/business-object-model#DataEntity> , <http://dataconservancy.org/business-object-model#ContentEntity> , <http://dataconservancy.org/business-object-model#BusinessObject> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                [ a       <http://www.w3.org/2002/07/owl#Class> ;
+                  <http://www.w3.org/2002/07/owl#intersectionOf>
+                          ( _:b17 _:b12 _:b22 _:b2 _:b1 )
+                ] .
+
+<http://dataconservancy.org/business-object-model#hasFixity>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying the fixity of a File"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#File> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has fixity"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+<http://dataconservancy.org/business-object-model#hasDepositDate>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying the deposit date for a Collection, DataItem or File."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#MemberEntity> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has deposit date"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://dataconservancy.org/business-object-model#CollectionAggregator>
+        a       <http://www.w3.org/2002/07/owl#Class> .
+
+_:b22   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasSize> .
+
+<http://dataconservancy.org/business-object-model#isMemberOf>
+        a       <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Links from a constituent member to an aggregating object."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#MemberEntity> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "is member of"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://dataconservancy.org/business-object-model#ContentEntity> ;
+        <http://www.w3.org/2002/07/owl#inverseOf>
+                <http://dataconservancy.org/business-object-model#hasMember> .
+
+_:b23   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasCreateDate> .
+
+<http://dataconservancy.org/business-object-model#Project>
+        a       <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                " A Project aggregates Collections "@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Project"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dataconservancy.org/business-object-model#ContentEntity> , <http://dataconservancy.org/business-object-model#CollectionAggregator> , <http://dataconservancy.org/business-object-model#BusinessObject> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                [ a       <http://www.w3.org/2002/07/owl#Class> ;
+                  <http://www.w3.org/2002/07/owl#intersectionOf>
+                          ( _:b16 _:b18 _:b24 _:b25 _:b19 _:b3 _:b14 _:b26 _:b27 _:b7 )
+                ] .
+
+_:b24   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasPublisher> .
+
+<http://dataconservancy.org/business-object-model#Collection>
+        a       <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "\n      A Collection is a group of Collections and DataItems.\n    "@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Collection"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dataconservancy.org/business-object-model#MemberEntity> , <http://dataconservancy.org/business-object-model#DataAggregator> , <http://dataconservancy.org/business-object-model#ContentEntity> , <http://dataconservancy.org/business-object-model#CollectionAggregator> , <http://dataconservancy.org/business-object-model#BusinessObject> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                [ a       <http://www.w3.org/2002/07/owl#Class> ;
+                  <http://www.w3.org/2002/07/owl#intersectionOf>
+                          ( _:b20 _:b8 _:b10 _:b9 _:b21 )
+                ] .
+
+<http://dataconservancy.org/business-object-model#DataEntity>
+        a       <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                [ a       <http://www.w3.org/2002/07/owl#Class> ;
+                  <http://www.w3.org/2002/07/owl#intersectionOf>
+                          ( _:b23 _:b5 _:b28 _:b29 )
+                ] .
+
+<http://dataconservancy.org/business-object-model#DataAggregator>
+        a       <http://www.w3.org/2002/07/owl#Class> .
+
+_:b11   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasFixity> .
+
+<http://dataconservancy.org/business-object-model#hasVersion>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying a version for the BusinessObject."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#BusinessObject> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has version"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+_:b26   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#maxCardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasFundingEntity> .
+
+<http://dataconservancy.org/business-object-model#hasAllottedStorage>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying the amount of allotted storage for the Project."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#Project> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has allotted storage"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#long> .
+
+_:b30   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#allValuesFrom>
+                <http://dataconservancy.org/business-object-model#File> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasMember> .
+
+<http://dataconservancy.org/business-object-model#hasMetadata>
+        a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Links from a BusinessObject to a metadata File"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#BusinessObject> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has metadata"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://dataconservancy.org/business-object-model#MetadataFile> .
+
+_:b29   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasDepositor> .
+
+<http://dataconservancy.org/business-object-model#hasDepositor>
+        a       <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data type specifying a depositor for a Collection, DataItem or File."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#MemberEntity> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has depositor"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://dataconservancy.org/business-object-model#Person> .
+
+_:b28   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasModifiedDate> .
+
+<http://dataconservancy.org/business-object-model#DataItem>
+        a       <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "\n      A DataItem is an aggregation of Files. \n    "@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DataItem"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dataconservancy.org/business-object-model#MemberEntity> , <http://dataconservancy.org/business-object-model#DataEntity> , <http://dataconservancy.org/business-object-model#DataAggregator> , <http://dataconservancy.org/business-object-model#ContentEntity> , <http://dataconservancy.org/business-object-model#BusinessObject> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                [ a       <http://www.w3.org/2002/07/owl#Class> ;
+                  <http://www.w3.org/2002/07/owl#intersectionOf>
+                          ( _:b30 _:b15 _:b13 _:b4 )
+                ] .
+
+<http://dataconservancy.org/business-object-model#hasAwardNumber>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying the award number of a grant provided by a funding agency."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#Project> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has award number"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+<http://dataconservancy.org/business-object-model#isMetadataFor>
+        a       <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Links from a metadata File to a Businsess Object."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#File> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "is metadata for"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://dataconservancy.org/business-object-model#BusinessObject> ;
+        <http://www.w3.org/2002/07/owl#inverseOf>
+                <http://dataconservancy.org/business-object-model#hasMetadata> .
+
+<http://dataconservancy.org/business-object-model#hasModifiedDate>
+        a       <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "A data property specifying the modification date for a Collection, DataItem or File."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://dataconservancy.org/business-object-model#MemberEntity> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has modified date"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#dateTime> .
+
+_:b27   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasFixity> .
+
+_:b25   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+        <http://www.w3.org/2002/07/owl#cardinality>
+                "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                <http://dataconservancy.org/business-object-model#hasAllottedStorage> .
+
+<http://dataconservancy.org/business-object-model#BusinessObject>
+        a       <http://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "\n      A BusinessObject is a common superclass for objects which must have a business ID\n    "@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BusinessObject"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                [ a       <http://www.w3.org/2002/07/owl#Restriction> ;
+                  <http://www.w3.org/2002/07/owl#cardinality>
+                          "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+                  <http://www.w3.org/2002/07/owl#onProperty>
+                          <http://dataconservancy.org/business-object-model#hasBusinessId>
+                ] .

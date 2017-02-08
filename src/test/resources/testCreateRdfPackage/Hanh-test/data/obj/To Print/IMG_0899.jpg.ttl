@@ -1,0 +1,10 @@
+@prefix bom:   <http://dataconservancy.org/business-object-model#> .
+
+<bag://Hanh-test/data/bin/To%20Print/IMG_0899.jpg>
+        a                    bom:Metadata ;
+        bom:hasCreateDate    "2014-09-10T17:39:37Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        bom:hasFormat        "info:pronom/fmt/43" , "image/jpeg" ;
+        bom:hasModifiedDate  "2014-09-10T17:39:38Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        bom:hasSize          "5718363"^^<http://www.w3.org/2001/XMLSchema#long> ;
+        bom:hasTitle         "IMG_0899.jpg" ;
+        bom:metadataFor      <bag://Hanh-test/data/obj/To%20Print.ttl> .
