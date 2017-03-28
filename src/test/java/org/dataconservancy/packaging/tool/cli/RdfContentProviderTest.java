@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Johns Hopkins University
+ * Copyright 2017 Johns Hopkins University
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,16 +20,11 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
-import org.dataconservancy.packaging.tool.api.RulesEngine;
-import org.dataconservancy.packaging.tool.impl.RulesEngineImpl;
-import org.junit.Test;
 
 import org.dataconservancy.packaging.shared.IpmPackager;
-import org.dataconservancy.packaging.tool.api.PackageDescriptionCreator;
-import org.dataconservancy.packaging.tool.impl.GeneralPackageDescriptionCreator;
+import org.dataconservancy.packaging.tool.api.RulesEngine;
 import org.dataconservancy.packaging.tool.impl.RulesEngineImpl;
 import org.dataconservancy.packaging.tool.model.builder.xstream.JaxbPackageDescriptionRulesBuilder;
-import org.dataconservancy.packaging.tool.model.PackageDescription;
 import org.dataconservancy.packaging.tool.model.PackageDescriptionRulesBuilder;
 import org.dataconservancy.packaging.tool.model.rules.RulesSpec;
 
@@ -39,6 +34,7 @@ import java.net.URI;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import org.junit.Test;
 
 
 /**
@@ -50,7 +46,7 @@ public class RdfContentProviderTest {
     // Create a Jena model, package metadata and generation parameters
     // to pass to an IpmPackager to create a package.
     // Compare the package contents to that of the original source.
-    //@Test
+    @Test
     public void testCreateRdfPackageFromJenaFile() throws Exception {
         final String dataResource = "/testCreateRdfPackage/";
         final String jenaResource = dataResource + "state/DOMAIN_OBJECTS";
@@ -85,28 +81,30 @@ public class RdfContentProviderTest {
         // TODO - Test the package contents
         assertNotNull(pkg);
     }
+
+
     // Create a Jena model, package metadata and generation parameters
     // to pass to an IpmPackager to create a package.
     // Compare the package contents to that of the original source.
     @Test
     public void testCreateRdfPackageFromRules() throws Exception {
-        final String dataResource = "/testCreateRdfPackage/Hanh-test/data/bin";
+        final String rootFolder   = "/testCreateRdfPackage/narwhal";
+        final String dataResource = rootFolder + "/eloka-arctic.org";
 
         // Rules engine creates Jena model from rules and local data
-        InputStream rulesStream =
+        final InputStream rulesStream =
                 RdfContentProviderTest.class.getClassLoader()
                         .getResourceAsStream("default-engine-rules.xml");
 
-        PackageDescriptionRulesBuilder builder = new JaxbPackageDescriptionRulesBuilder();
-        RulesSpec rulesSpec = builder.buildPackageDescriptionRules(rulesStream);
-        RulesEngine engine = new RulesEngineImpl(rulesSpec);
-
+        final PackageDescriptionRulesBuilder builder = new JaxbPackageDescriptionRulesBuilder();
+        final RulesSpec rulesSpec = builder.buildPackageDescriptionRules(rulesStream);
+        final RulesEngine engine = new RulesEngineImpl(rulesSpec);
 
         String dataPath = RdfContentProviderTest.class.getResource(dataResource).getPath();
         dataPath = dataPath.replaceFirst("^/(.:/)", "$1"); // Remove leading "/" on Windows
-        File dataFolder = new File(dataPath);
-        Model jenaModel = (Model) engine.generateRdf(dataFolder);
-        assertEquals(148, jenaModel.size());
+        final File dataFolder = new File(dataPath);
+        final Model jenaModel = engine.generateRdf(dataFolder);
+        assertEquals(610, jenaModel.size());
 
         // Metadata
         final InputStream metadataStream =
@@ -117,9 +115,9 @@ public class RdfContentProviderTest {
                 RdfContentProviderTest.class.getResourceAsStream("/PackageGenerationParams.properties");
 
         // Create content provider using local data path
-        //String contentPath = RdfContentProviderTest.class.getResource(dataResource).getPath();
-        //dataPath = dataPath.replaceFirst("^/(.:/)", "$1"); // Remove leading "/" on Windows
-        final URI contentURI = new URI(dataPath);
+        String rootPath = RdfContentProviderTest.class.getResource(rootFolder).getPath();
+        rootPath = rootPath.replaceFirst("^/(.:/)", "$1"); // Remove leading "/" on Windows
+        final URI contentURI = new URI(rootPath);
 
         final RdfContentProvider contentProvider = new RdfContentProvider(jenaModel, contentURI);
 

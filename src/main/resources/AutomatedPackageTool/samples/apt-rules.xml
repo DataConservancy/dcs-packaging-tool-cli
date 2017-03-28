@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright 2012 Johns Hopkins University
+  ~ Copyright 2017 Johns Hopkins University
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -26,15 +26,6 @@
 		</select>
 	</rule>
 
-	<!-- Got rid of this rule, as it seems that nobody really wants collections 
-		It was: Root directories containing no files are projects <rule> <select 
-		action="include"> <test operation="and"> <test operation="count" max="0"> 
-		<file rel="parent" /> </test> <test operation="count" max="0"> <file rel="children"> 
-		<test operation="match" value="File"> <value type="FileMetadata" specifier="fileType" 
-		/> </test> </file> </test> </test> </select> <mapping> <type>Project</type> 
-		<properties> <property name="id"> <value type="Property" specifier="project.id" 
-		description="Project ID" /> </property> </properties> </mapping> </rule> -->
-
 	<!-- Other root directories are Collections -->
 	<rule>
 		<!-- Root directories containing no files are Projects -->
@@ -47,23 +38,17 @@
 			<mapping>
 				<type>Collection</type>
 				<properties>
-					<property name="createDate">
+					<property name="http://dataconservancy.org/business-object-model#hasCreateDate">
 						<value type="FileMetadata" specifier="createDate" />
 					</property>
-					<property name="modifiedDate">
+					<property name="http://dataconservancy.org/business-object-model#hasModifiedDate">
 						<value type="FileMetadata" specifier="modifiedDate" />
 					</property>
-					<property name="title">
+					<property name="http://dataconservancy.org/business-object-model#hasTitle">
 						<value type="FileMetadata" specifier="name" />
 					</property>
 				</properties>
 				<relationships>
-					<!-- Since we're moving to late binding of the project commenting out this requirement. Leaving it here in case the plan changes again.
-					This root collection should be part of the declared project.
-					<relationship name="http://purl.org/dc/terms/isPartOf">
-						<value type="Property" specifier="project.id" description="Project ID" />
-					</relationship>-->
-
 				</relationships>
 			</mapping>
 		</mappings>
@@ -104,20 +89,20 @@
 			<mapping>
 				<type>DataItem</type>
 				<properties>
-					<property name="createDate">
+					<property name="http://dataconservancy.org/business-object-model#hasCreateDate">
 						<value type="FileMetadata" specifier="createDate" />
 					</property>
-					<property name="modifiedDate">
+					<property name="http://dataconservancy.org/business-object-model#hasModifiedDate">
 						<value type="FileMetadata" specifier="modifiedDate" />
 					</property>
-					<property name="name">
+					<property name="http://dataconservancy.org/business-object-model#hasTitle">
 						<value type="FileMetadata" specifier="name" />
 					</property>
 				</properties>
 				<relationships>
 
 					<!-- DataItems are members of the parent directory's collection -->
-					<relationship name="isMemberOf">
+					<relationship name="http://dataconservancy.org/business-object-model#isMemberOf">
 						<file rel="parent" />
 					</relationship>
 
@@ -146,19 +131,19 @@
 			<mapping>
 				<type>Collection</type>
 				<properties>
-					<property name="createDate">
+					<property name="http://dataconservancy.org/business-object-model#hasCreateDate">
 						<value type="FileMetadata" specifier="createDate" />
 					</property>
-					<property name="modifiedDate">
+					<property name="http://dataconservancy.org/business-object-model#hasModifiedDate">
 						<value type="FileMetadata" specifier="modifiedDate" />
 					</property>
-					<property name="title">
+					<property name="http://dataconservancy.org/business-object-model#hasTitle">
 						<value type="FileMetadata" specifier="name" />
 					</property>
 				</properties>
 				<relationships>
 					<!-- Aggregate by project if parent is root (i.e. parent has no parents) -->
-					<relationship name="isMemberOf">
+					<relationship name="http://dataconservancy.org/business-object-model#isMemberOf">
 						<file rel="parent">
 							<test operation="count" max="0">
 								<file rel="parent" />
@@ -168,7 +153,7 @@
 
 					<!-- Aggregate by collection if the parent is a collection (i.e. has 
 						a parent) -->
-					<relationship name="isMemberOf">
+					<relationship name="http://dataconservancy.org/business-object-model#isMemberOf">
 						<file rel="parent">
 							<test operation="count" min="0">
 								<file rel="parent" />
@@ -216,26 +201,26 @@
 		</select>
 		<mappings>
 			<mapping>
-				<type>DataFile</type>
+				<type byteStream="true">DataFile</type>
 				<properties>
-					<property name="createDate">
+					<property name="http://dataconservancy.org/business-object-model#hasCreateDate">
 						<value type="FileMetadata" specifier="createDate" />
 					</property>
-					<property name="modifiedDate">
+					<property name="http://dataconservancy.org/business-object-model#hasModifiedDate">
 						<value type="FileMetadata" specifier="modifiedDate" />
 					</property>
-					<property name="size">
+					<property name="http://dataconservancy.org/business-object-model#hasSize">
 						<value type="FileMetadata" specifier="size" />
 					</property>
-					<property name="fileName">
+					<property name="http://dataconservancy.org/business-object-model#hasTitle">
 						<value type="FileMetadata" specifier="name" />
 					</property>
-					<property name="format">
+					<property name="http://dataconservancy.org/business-object-model#hasFormat">
 						<value type="FileMetadata" specifier="format" />
 					</property>
 				</properties>
 				<relationships>
-					<relationship name="isMemberOf">
+					<relationship name="http://dataconservancy.org/business-object-model#isMemberOf">
 						<file rel="parent" />
 					</relationship>
 				</relationships>
@@ -281,20 +266,20 @@
 			<mapping specifier="0">
 				<type byteStream="false">DataItem</type>
 				<properties>
-					<property name="createDate">
+					<property name="http://dataconservancy.org/business-object-model#hasCreateDate">
 						<value type="FileMetadata" specifier="createDate" />
 					</property>
-					<property name="modifiedDate">
+					<property name="http://dataconservancy.org/business-object-model#hasModifiedDate">
 						<value type="FileMetadata" specifier="modifiedDate" />
 					</property>
-					<property name="name">
+					<property name="http://dataconservancy.org/business-object-model#hasTitle">
 						<value type="FileMetadata" specifier="name" />
 					</property>
 				</properties>
 				<relationships>
 
 					<!-- DataItems are members of the parent directory's collection -->
-					<relationship name="isMemberOf">
+					<relationship name="http://dataconservancy.org/business-object-model#isMemberOf">
 						<file rel="parent" />
 					</relationship>
 
@@ -303,24 +288,24 @@
 			<mapping>
 				<type byteStream="true">DataFile</type>
 				<properties>
-					<property name="createDate">
+					<property name="http://dataconservancy.org/business-object-model#hasCreateDate">
 						<value type="FileMetadata" specifier="createDate" />
 					</property>
-					<property name="modifiedDate">
+					<property name="http://dataconservancy.org/business-object-model#hasModifiedDate">
 						<value type="FileMetadata" specifier="modifiedDate" />
 					</property>
-					<property name="size">
+					<property name="http://dataconservancy.org/business-object-model#hasSize">
 						<value type="FileMetadata" specifier="size" />
 					</property>
-					<property name="fileName">
+					<property name="http://dataconservancy.org/business-object-model#hasTitle">
 						<value type="FileMetadata" specifier="name" />
 					</property>
-					<property name="format">
+					<property name="http://dataconservancy.org/business-object-model#hasFormat">
 						<value type="FileMetadata" specifier="format" />
 					</property>
 				</properties>
 				<relationships>
-					<relationship name="isMemberOf" specifier="0">
+					<relationship name="http://dataconservancy.org/business-object-model#isMemberOf" specifier="0">
 						<file rel="self" />
 					</relationship>
 				</relationships>
@@ -337,26 +322,26 @@
 		</select>
 		<mappings>
 			<mapping>
-				<type>MetadataFile</type>
+				<type byteStream="true">MetadataFile</type>
 				<properties>
-					<property name="createDate">
+					<property name="http://dataconservancy.org/business-object-model#hasCreateDate">
 						<value type="FileMetadata" specifier="createDate" />
 					</property>
-					<property name="modifiedDate">
+					<property name="http://dataconservancy.org/business-object-model#hasModifiedDate">
 						<value type="FileMetadata" specifier="modifiedDate" />
 					</property>
-					<property name="size">
+					<property name="http://dataconservancy.org/business-object-model#hasSize">
 						<value type="FileMetadata" specifier="size" />
 					</property>
-					<property name="fileName">
+					<property name="http://dataconservancy.org/business-object-model#hasTitle">
 						<value type="FileMetadata" specifier="name" />
 					</property>
-					<property name="format">
+					<property name="http://dataconservancy.org/business-object-model#hasFormat">
 						<value type="FileMetadata" specifier="format" />
 					</property>
 				</properties>
 				<relationships>
-					<relationship name="isMetadataFor">
+					<relationship name="http://dataconservancy.org/business-object-model#isMetadataFor">
 						<file rel="parent" />
 					</relationship>
 				</relationships>
