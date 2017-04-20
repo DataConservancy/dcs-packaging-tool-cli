@@ -2,19 +2,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
 
+    <modelVersion>4.0.0</modelVersion>
     <groupId>org.dataconservancy.pkgtool</groupId>
     <artifactId>dcs-packaging-tool-cli</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>Automated Packaging Command Line Tool</name>
+
     <parent>
         <groupId>org.dataconservancy</groupId>
         <artifactId>project-pom</artifactId>
         <version>8</version>
     </parent>
+
     <!-- Properties ================================================== -->
-    <properties></properties>
+    <properties>
+        <!-- definition of assembly related properties -->
+        <pkg.gen.assembly.standalone.id>standalone</pkg.gen.assembly.standalone.id>
+        <pkg.gen.assembly.standalone.fileName>${project.artifactId}</pkg.gen.assembly.standalone.fileName>
+        <pkg.gen.assembly.dist.id>dist</pkg.gen.assembly.dist.id>
+        <pkg.gen.assembly.dist.fileName>${project.artifactId}</pkg.gen.assembly.dist.fileName>
+    </properties>
 
     <!-- Profiles  =================================================== -->
 
@@ -45,6 +53,19 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                            </manifest>
+                        </archive>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
                     <version>3.0.0</version>
                 </plugin>
                 <plugin>
@@ -125,6 +146,53 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <appendAssemblyId>true</appendAssemblyId>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>standalone-jar</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <archive>
+                                <manifest>
+                                    <mainClass>org.dataconservancy.packaging.tool.cli.AutomatedPackageTool</mainClass>
+                                    <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                                    <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                                </manifest>
+                                <manifestEntries>
+                                    <Implementation-Title>${project.name}</Implementation-Title>
+                                    <Implementation-Version>${project.version}
+                                        r${buildNumber}</Implementation-Version>
+                                </manifestEntries>
+                            </archive>
+                            <!--finalName>${pkg.gen.assembly.standalone.fileName}</finalName-->
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                            </descriptorRefs>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>dist</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <!--finalName>${pkg.gen.assembly.dist.fileName}</finalName-->
+                            <descriptorRefs>
+                                <descriptorRef>bin</descriptorRef>
+                            </descriptorRefs>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -140,22 +208,42 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>1.7.10</version>
+                <version>1.7.21</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>1.1.2</version>
             </dependency>
             <dependency>
                 <groupId>org.dataconservancy.pkgtool</groupId>
                 <artifactId>dcs-packaging-tool-api</artifactId>
-                <version>1.0.3</version>
+                <version>1.0.4</version>
+            </dependency>
+            <dependency>
+                <groupId>org.dataconservancy.pkgtool</groupId>
+                <artifactId>dcs-packaging-tool-impl</artifactId>
+                <version>1.0.4</version>
+            </dependency>
+            <dependency>
+                <groupId>org.dataconservancy.pkgtool</groupId>
+                <artifactId>dcs-packaging-tool-ser</artifactId>
+                <version>1.0.4</version>
             </dependency>
             <dependency>
                 <groupId>org.dataconservancy.pkgtool</groupId>
                 <artifactId>dcs-packaging-tool-model-builder</artifactId>
-                <version>1.0.3</version>
+                <version>1.0.4</version>
             </dependency>
             <dependency>
                 <groupId>org.dataconservancy.packaging.shared</groupId>
                 <artifactId>dcs-packaging-shared</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.dataconservancy.rules</groupId>
+                <artifactId>dcs-packaging-rules</artifactId>
+                <version>0.01</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -178,7 +266,25 @@
         </dependency>
         <dependency>
             <groupId>org.dataconservancy.pkgtool</groupId>
+            <artifactId>dcs-packaging-tool-impl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.dataconservancy.pkgtool</groupId>
+            <artifactId>dcs-packaging-tool-ser</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.dataconservancy.pkgtool</groupId>
             <artifactId>dcs-packaging-tool-model-builder</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.dataconservancy.rules</groupId>
+            <artifactId>dcs-packaging-rules</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-simple</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
     <!-- Provided  =================================================== -->
@@ -196,7 +302,7 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <scope>runtime</scope>
+            <version>1.1.2</version>
         </dependency>
 
     </dependencies>
