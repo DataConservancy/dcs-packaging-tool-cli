@@ -218,27 +218,27 @@
             <dependency>
                 <groupId>org.dataconservancy.pkgtool</groupId>
                 <artifactId>dcs-packaging-tool-api</artifactId>
-                <version>1.0.4-SNAPSHOT</version>
+                <version>1.0.4</version>
             </dependency>
             <dependency>
                 <groupId>org.dataconservancy.pkgtool</groupId>
                 <artifactId>dcs-packaging-tool-impl</artifactId>
-                <version>1.0.4-SNAPSHOT</version>
+                <version>1.0.4</version>
             </dependency>
             <dependency>
                 <groupId>org.dataconservancy.pkgtool</groupId>
                 <artifactId>dcs-packaging-tool-ser</artifactId>
-                <version>1.0.4-SNAPSHOT</version>
+                <version>1.0.4</version>
             </dependency>
             <dependency>
                 <groupId>org.dataconservancy.pkgtool</groupId>
                 <artifactId>dcs-packaging-tool-model-builder</artifactId>
-                <version>1.0.4-SNAPSHOT</version>
+                <version>1.0.4</version>
             </dependency>
             <dependency>
                 <groupId>org.dataconservancy.packaging.shared</groupId>
                 <artifactId>dcs-packaging-shared</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>org.dataconservancy.rules</groupId>
