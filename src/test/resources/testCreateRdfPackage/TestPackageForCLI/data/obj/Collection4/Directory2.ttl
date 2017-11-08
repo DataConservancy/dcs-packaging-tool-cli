@@ -1,0 +1,6 @@
+@prefix bom:   <http://dataconservancy.org/business-object-model#> .
+
+<>      a                  bom:Collection ;
+        bom:hasCreateDate  "2016-02-28T04:02:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        bom:hasTitle       "Directory2" ;
+        bom:isMemberOf     <bag://TestPackageForCLI/data/obj/Collection4.ttl> .

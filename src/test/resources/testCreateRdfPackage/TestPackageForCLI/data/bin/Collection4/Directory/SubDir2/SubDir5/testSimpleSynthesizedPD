@@ -1,0 +1,230 @@
+{
+  "@context" : {
+    "dc" : "http://dataconservancy.org/ns/types/"
+  },
+  "@graph" : [ {
+    "@id" : "_:t0",
+    "@type" : "dc:Property",
+    "dc:hasName" : "format",
+    "dc:hasValue" : "info:pronom/fmt/394"
+  }, {
+    "@id" : "_:t1",
+    "@type" : "dc:Property",
+    "dc:hasName" : "title",
+    "dc:hasValue" : "TestCollection"
+  }, {
+    "@id" : "_:t10",
+    "@type" : "dc:Property",
+    "dc:hasName" : "createDate",
+    "dc:hasValue" : "2014-08-12T17:35:01Z"
+  }, {
+    "@id" : "_:t11",
+    "@type" : "dc:Property",
+    "dc:hasName" : "description",
+    "dc:hasValue" : "Summary"
+  }, {
+    "@id" : "_:t12",
+    "@type" : "dc:Relationship",
+    "dc:hasTarget" : "file:/Users/hvu/Desktop/TestCollection/",
+    "dc:hasType" : "isMemberOf",
+    "dc:requiresURI" : "true"
+  }, {
+    "@id" : "_:t13",
+    "@type" : "dc:Property",
+    "dc:hasName" : "phone",
+    "dc:hasValue" : "tel:+1-540-444-4445"
+  }, {
+    "@id" : "_:t14",
+    "@type" : "dc:Property",
+    "dc:hasName" : "modifiedDate",
+    "dc:hasValue" : "2014-08-12T17:35:01Z"
+  }, {
+    "@id" : "_:t15",
+    "@type" : "dc:Property",
+    "dc:hasName" : "createDate",
+    "dc:hasValue" : "2014-08-12T17:35:01Z"
+  }, {
+    "@id" : "_:t16",
+    "@type" : "dc:Property",
+    "dc:hasName" : "personName",
+    "dc:hasValue" : "Hanh"
+  }, {
+    "@id" : "_:t17",
+    "@type" : "dc:Property",
+    "dc:hasName" : "size",
+    "dc:hasValue" : "6148"
+  }, {
+    "@id" : "_:t18",
+    "@type" : "dc:Property",
+    "dc:hasName" : "modifiedDate",
+    "dc:hasValue" : "2014-08-12T17:35:01Z"
+  }, {
+    "@id" : "_:t19",
+    "@type" : "dc:Artifact",
+    "dc:hasId" : "file:/Users/hvu/Desktop/TestCollection/Screen1.png#1562623505",
+    "dc:hasProperty" : [ {
+      "@id" : "_:t2"
+    }, {
+      "@id" : "_:t20"
+    }, {
+      "@id" : "_:t21"
+    } ],
+    "dc:hasRef" : "file:/Users/hvu/Desktop/TestCollection/Screen1.png#1562623505",
+    "dc:hasRelationship" : {
+      "@id" : "_:t12"
+    },
+    "dc:hasType" : "DataItem",
+    "dc:isByteStream" : "false",
+    "dc:isIgnored" : "false"
+  }, {
+    "@id" : "_:t2",
+    "@type" : "dc:Property",
+    "dc:hasName" : "modifiedDate",
+    "dc:hasValue" : "2014-07-24T17:36:06Z"
+  }, {
+    "@id" : "_:t20",
+    "@type" : "dc:Property",
+    "dc:hasName" : "createDate",
+    "dc:hasValue" : "2014-07-24T17:36:06Z"
+  }, {
+    "@id" : "_:t21",
+    "@type" : "dc:Property",
+    "dc:hasName" : "name",
+    "dc:hasValue" : "Synthesized DI"
+  }, {
+    "@id" : "_:t22",
+    "@type" : "dc:Relationship",
+    "dc:hasTarget" : "file:/Users/hvu/Desktop/TestCollection/",
+    "dc:hasType" : "isMetadataFor",
+    "dc:requiresURI" : "true"
+  }, {
+    "@id" : "_:t23",
+    "@type" : "dc:Artifact",
+    "dc:hasId" : "file:/Users/hvu/Desktop/TestCollection/.DS_Store",
+    "dc:hasProperty" : [ {
+      "@id" : "_:t0"
+    }, {
+      "@id" : "_:t14"
+    }, {
+      "@id" : "_:t24"
+    }, {
+      "@id" : "_:t17"
+    }, {
+      "@id" : "_:t10"
+    } ],
+    "dc:hasRef" : "file:/Users/hvu/Desktop/TestCollection/.DS_Store",
+    "dc:hasRelationship" : {
+      "@id" : "_:t22"
+    },
+    "dc:hasType" : "MetadataFile",
+    "dc:isByteStream" : "true",
+    "dc:isIgnored" : "true"
+  }, {
+    "@id" : "_:t24",
+    "@type" : "dc:Property",
+    "dc:hasName" : "fileName",
+    "dc:hasValue" : ".DS_Store"
+  }, {
+    "@id" : "_:t25",
+    "@type" : "dc:Property",
+    "dc:hasName" : "creator",
+    "dc:hasProperty" : [ {
+      "@id" : "_:t16"
+    }, {
+      "@id" : "_:t13"
+    } ]
+  }, {
+    "@id" : "_:t26",
+    "@type" : "dc:PackageDescription",
+    "dc:hasArtifact" : [ {
+      "@id" : "_:t19"
+    }, {
+      "@id" : "_:t27"
+    }, {
+      "@id" : "_:t23"
+    }, {
+      "@id" : "_:t3"
+    } ],
+    "dc:hasProperty" : {
+      "@id" : "_:t28"
+    },
+    "dc:hasSpecificaitonId" : "http://dataconservancy.org/spec/dcs-pkg-desc"
+  }, {
+    "@id" : "_:t27",
+    "@type" : "dc:Artifact",
+    "dc:hasId" : "file:/Users/hvu/Desktop/TestCollection/",
+    "dc:hasProperty" : [ {
+      "@id" : "_:t18"
+    }, {
+      "@id" : "_:t1"
+    }, {
+      "@id" : "_:t15"
+    }, {
+      "@id" : "_:t11"
+    }, {
+      "@id" : "_:t25"
+    } ],
+    "dc:hasRef" : "file:/Users/hvu/Desktop/TestCollection/",
+    "dc:hasType" : "Collection",
+    "dc:isByteStream" : "false",
+    "dc:isIgnored" : "false"
+  }, {
+    "@id" : "_:t28",
+    "@type" : "dc:Property",
+    "dc:hasName" : "root",
+    "dc:hasValue" : "file:/Users/hvu/Desktop/TestCollection/"
+  }, {
+    "@id" : "_:t3",
+    "@type" : "dc:Artifact",
+    "dc:hasId" : "file:/Users/hvu/Desktop/TestCollection/Screen1.png",
+    "dc:hasProperty" : [ {
+      "@id" : "_:t4"
+    }, {
+      "@id" : "_:t5"
+    }, {
+      "@id" : "_:t6"
+    }, {
+      "@id" : "_:t8"
+    }, {
+      "@id" : "_:t9"
+    } ],
+    "dc:hasRef" : "file:/Users/hvu/Desktop/TestCollection/Screen1.png",
+    "dc:hasRelationship" : {
+      "@id" : "_:t7"
+    },
+    "dc:hasType" : "DataFile",
+    "dc:isByteStream" : "true",
+    "dc:isIgnored" : "false"
+  }, {
+    "@id" : "_:t4",
+    "@type" : "dc:Property",
+    "dc:hasName" : "createDate",
+    "dc:hasValue" : "2014-07-24T17:36:06Z"
+  }, {
+    "@id" : "_:t5",
+    "@type" : "dc:Property",
+    "dc:hasName" : "fileName",
+    "dc:hasValue" : "Screen1.png"
+  }, {
+    "@id" : "_:t6",
+    "@type" : "dc:Property",
+    "dc:hasName" : "format",
+    "dc:hasValue" : [ "info:pronom/fmt/13", "image/png" ]
+  }, {
+    "@id" : "_:t7",
+    "@type" : "dc:Relationship",
+    "dc:hasTarget" : "file:/Users/hvu/Desktop/TestCollection/Screen1.png#1562623505",
+    "dc:hasType" : "isMemberOf",
+    "dc:requiresURI" : "true"
+  }, {
+    "@id" : "_:t8",
+    "@type" : "dc:Property",
+    "dc:hasName" : "modifiedDate",
+    "dc:hasValue" : "2014-07-24T17:36:06Z"
+  }, {
+    "@id" : "_:t9",
+    "@type" : "dc:Property",
+    "dc:hasName" : "size",
+    "dc:hasValue" : "1877418"
+  } ]
+}

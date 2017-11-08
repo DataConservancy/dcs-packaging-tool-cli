@@ -1,0 +1,14 @@
+1669f812dc3999324c0c7cf92dd52eda  data/obj/Collection4/Directory/SubDir2/SubDir5.ttl
+6ab3c67b798485ba5cd7cda87d526850  data/obj/Collection4/Directory/SubDir2.ttl
+fdc2aa671d445a0bfbc8858a606c23c5  data/obj/Collection4/Directory/SubDir2/IMG_2061.JPG.ttl
+0ccf68fd7241f71f010d2fe5d0c65f53  data/bin/Collection4/Directory/SubDir2/SubDir5/testSimpleSynthesizedPD
+24c4b04fa258eca9fa9605bde327d66a  data/obj/Collection4/Directory/SubDir.ttl
+8b8ec8fc7069229c6d4fbb672e73c0e2  data/obj/Collection4/Directory/SubDir3/SubDir4.ttl
+f7532dbb0dc45821cb30c84d6a278794  data/obj/Collection4/Directory/SubDir2/SubDir5/testSimpleSynthesizedPD.ttl
+7c9eac72aaabd5219dbf34d45907216b  data/bin/Collection4/Directory/SubDir2/IMG_2061.JPG
+21271a75cf224ff2622b786c2d6a6648  data/obj/Collection4/Directory/SubDir3.ttl
+ef0b66f41f6574dcff469ec8e59c3034  data/obj/Collection4/Directory.ttl
+f08d37133ee6c4e892ff8a706ffbd165  data/obj/Collection4.ttl
+00053c45ba6c066d7002cf0810139925  data/obj/Collection4/Directory/SubDir3/SubDir4/TestPDTwoCreators.ttl
+e94741fb101acfc5f99b36b887bd78d7  data/bin/Collection4/Directory/SubDir3/SubDir4/TestPDTwoCreators
+9e0005d7c102cce4f6a5075ccfd5f5fb  data/obj/Collection4/Directory2.ttl

@@ -1,0 +1,192 @@
+{
+  "@context" : {
+    "dc" : "http://dataconservancy.org/ns/types/"
+  },
+  "@graph" : [ {
+    "@id" : "_:t0",
+    "@type" : "dc:Property",
+    "dc:hasName" : "createDate",
+    "dc:hasValue" : "2014-07-24T17:36:06Z"
+  }, {
+    "@id" : "_:t1",
+    "@type" : "dc:PackageDescription",
+    "dc:hasArtifact" : [ {
+      "@id" : "_:t2"
+    }, {
+      "@id" : "_:t3"
+    } ],
+    "dc:hasProperty" : {
+      "@id" : "_:t4"
+    },
+    "dc:hasSpecificaitonId" : "http://dataconservancy.org/spec/dcs-pkg-desc"
+  }, {
+    "@id" : "_:t10",
+    "@type" : "dc:Property",
+    "dc:hasName" : "personName",
+    "dc:hasValue" : "Willard Sirk"
+  }, {
+    "@id" : "_:t11",
+    "@type" : "dc:Property",
+    "dc:hasName" : "page",
+    "dc:hasValue" : "http://www.DachshundsRuns.paw"
+  }, {
+    "@id" : "_:t12",
+    "@type" : "dc:Property",
+    "dc:hasName" : "phone",
+    "dc:hasValue" : "tel:+1-540-456-1233"
+  }, {
+    "@id" : "_:t13",
+    "@type" : "dc:Relationship",
+    "dc:hasTarget" : "http://localhost:8080/project/1",
+    "dc:hasType" : "http://purl.org/dc/terms/isPartOf",
+    "dc:requiresURI" : "true"
+  }, {
+    "@id" : "_:t14",
+    "@type" : "dc:Property",
+    "dc:hasName" : "size",
+    "dc:hasValue" : "1877418"
+  }, {
+    "@id" : "_:t15",
+    "@type" : "dc:Property",
+    "dc:hasName" : "description",
+    "dc:hasValue" : "summary "
+  }, {
+    "@id" : "_:t16",
+    "@type" : "dc:Property",
+    "dc:hasName" : "title",
+    "dc:hasValue" : "TestCollection"
+  }, {
+    "@id" : "_:t17",
+    "@type" : "dc:Property",
+    "dc:hasName" : "creator",
+    "dc:hasProperty" : [ {
+      "@id" : "_:t6"
+    }, {
+      "@id" : "_:t22"
+    }, {
+      "@id" : "_:t23"
+    }, {
+      "@id" : "_:t24"
+    } ]
+  }, {
+    "@id" : "_:t18",
+    "@type" : "dc:Property",
+    "dc:hasName" : "createDate",
+    "dc:hasValue" : "2014-08-12T17:35:01Z"
+  }, {
+    "@id" : "_:t19",
+    "@type" : "dc:Property",
+    "dc:hasName" : "format",
+    "dc:hasValue" : [ "info:pronom/fmt/13", "image/png" ]
+  }, {
+    "@id" : "_:t2",
+    "@type" : "dc:Artifact",
+    "dc:hasId" : "file:/Users/hvu/Desktop/TestCollection/Screen1.png",
+    "dc:hasProperty" : [ {
+      "@id" : "_:t19"
+    }, {
+      "@id" : "_:t20"
+    }, {
+      "@id" : "_:t14"
+    }, {
+      "@id" : "_:t8"
+    }, {
+      "@id" : "_:t0"
+    } ],
+    "dc:hasRef" : "file:/Users/hvu/Desktop/TestCollection/Screen1.png",
+    "dc:hasRelationship" : {
+      "@id" : "_:t21"
+    },
+    "dc:hasType" : "MetadataFile",
+    "dc:isByteStream" : "true",
+    "dc:isIgnored" : "false"
+  }, {
+    "@id" : "_:t20",
+    "@type" : "dc:Property",
+    "dc:hasName" : "fileName",
+    "dc:hasValue" : "Screen1.png"
+  }, {
+    "@id" : "_:t21",
+    "@type" : "dc:Relationship",
+    "dc:hasTarget" : "file:/Users/hvu/Desktop/TestCollection/",
+    "dc:hasType" : "isMetadataFor",
+    "dc:requiresURI" : "true"
+  }, {
+    "@id" : "_:t22",
+    "@type" : "dc:Property",
+    "dc:hasName" : "email",
+    "dc:hasValue" : "mailto:alfee@email.com"
+  }, {
+    "@id" : "_:t23",
+    "@type" : "dc:Property",
+    "dc:hasName" : "page",
+    "dc:hasValue" : "http://www.DachshundsRuns.paw"
+  }, {
+    "@id" : "_:t24",
+    "@type" : "dc:Property",
+    "dc:hasName" : "phone",
+    "dc:hasValue" : "tel:+1-540-888-5555"
+  }, {
+    "@id" : "_:t3",
+    "@type" : "dc:Artifact",
+    "dc:hasId" : "file:/Users/hvu/Desktop/TestCollection/",
+    "dc:hasProperty" : [ {
+      "@id" : "_:t15"
+    }, {
+      "@id" : "_:t16"
+    }, {
+      "@id" : "_:t5"
+    }, {
+      "@id" : "_:t9"
+    }, {
+      "@id" : "_:t17"
+    }, {
+      "@id" : "_:t18"
+    } ],
+    "dc:hasRef" : "file:/Users/hvu/Desktop/TestCollection/",
+    "dc:hasRelationship" : {
+      "@id" : "_:t13"
+    },
+    "dc:hasType" : "Collection",
+    "dc:isByteStream" : "false",
+    "dc:isIgnored" : "false"
+  }, {
+    "@id" : "_:t4",
+    "@type" : "dc:Property",
+    "dc:hasName" : "root",
+    "dc:hasValue" : "file:/Users/hvu/Desktop/TestCollection/"
+  }, {
+    "@id" : "_:t5",
+    "@type" : "dc:Property",
+    "dc:hasName" : "modifiedDate",
+    "dc:hasValue" : "2014-08-12T17:35:01Z"
+  }, {
+    "@id" : "_:t6",
+    "@type" : "dc:Property",
+    "dc:hasName" : "personName",
+    "dc:hasValue" : "Alfee Sirk"
+  }, {
+    "@id" : "_:t7",
+    "@type" : "dc:Property",
+    "dc:hasName" : "email",
+    "dc:hasValue" : "mailto:willard@email.com"
+  }, {
+    "@id" : "_:t8",
+    "@type" : "dc:Property",
+    "dc:hasName" : "modifiedDate",
+    "dc:hasValue" : "2014-07-24T17:36:06Z"
+  }, {
+    "@id" : "_:t9",
+    "@type" : "dc:Property",
+    "dc:hasName" : "creator",
+    "dc:hasProperty" : [ {
+      "@id" : "_:t10"
+    }, {
+      "@id" : "_:t7"
+    }, {
+      "@id" : "_:t11"
+    }, {
+      "@id" : "_:t12"
+    } ]
+  } ]
+}

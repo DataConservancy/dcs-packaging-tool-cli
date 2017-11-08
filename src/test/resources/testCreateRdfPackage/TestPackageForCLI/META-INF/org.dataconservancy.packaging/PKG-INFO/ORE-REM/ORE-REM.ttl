@@ -1,0 +1,48 @@
+@prefix ore:   <http://www.openarchives.org/ore/terms/> .
+@prefix ldp:   <http://www.w3.org/ns/ldp#> .
+@prefix iana:  <http://www.iana.org/assignments/relation/> .
+
+<>      a              ore:ResourceMap ;
+        ore:describes  <#Aggregation> .
+
+<bag://TestPackageForCLI/data/obj/Collection4/Directory.ttl>
+        a             ldp:Container ;
+        ldp:contains  <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir3.ttl> , <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir2.ttl> , <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir.ttl> .
+
+<bag://TestPackageForCLI/data/obj/Collection4.ttl>
+        a             ldp:Container ;
+        ldp:contains  <bag://TestPackageForCLI/data/obj/Collection4/Directory2.ttl> , <bag://TestPackageForCLI/data/obj/Collection4/Directory.ttl> .
+
+<bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir3/SubDir4/TestPDTwoCreators.ttl>
+        iana:describes  <bag://TestPackageForCLI/data/bin/Collection4/Directory/SubDir3/SubDir4/TestPDTwoCreators> .
+
+<bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir2/SubDir5/testSimpleSynthesizedPD.ttl>
+        iana:describes  <bag://TestPackageForCLI/data/bin/Collection4/Directory/SubDir2/SubDir5/testSimpleSynthesizedPD> .
+
+<#Aggregation>  a       ore:Aggregation ;
+        ore:aggregates  <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir3/SubDir4.ttl> , <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir3/SubDir4/TestPDTwoCreators.ttl> , <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir2/SubDir5/testSimpleSynthesizedPD.ttl> , <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir2/IMG_2061.JPG.ttl> , <bag://TestPackageForCLI/data/obj/Collection4/Directory.ttl> , <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir3.ttl> , <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir2.ttl> , <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir.ttl> , <bag://TestPackageForCLI/data/obj/Collection4.ttl> , <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir2/SubDir5.ttl> , <bag://TestPackageForCLI/data/obj/Collection4/Directory2.ttl> .
+
+<bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir3.ttl>
+        a             ldp:Container ;
+        ldp:contains  <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir3/SubDir4.ttl> .
+
+<bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir.ttl>
+        a       ldp:Container .
+
+<bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir3/SubDir4.ttl>
+        a             ldp:Container ;
+        ldp:contains  <bag://TestPackageForCLI/data/bin/Collection4/Directory/SubDir3/SubDir4/TestPDTwoCreators> .
+
+<bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir2.ttl>
+        a             ldp:Container ;
+        ldp:contains  <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir2/SubDir5.ttl> , <bag://TestPackageForCLI/data/bin/Collection4/Directory/SubDir2/IMG_2061.JPG> .
+
+<bag://TestPackageForCLI/data/obj/Collection4/Directory2.ttl>
+        a       ldp:Container .
+
+<bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir2/IMG_2061.JPG.ttl>
+        iana:describes  <bag://TestPackageForCLI/data/bin/Collection4/Directory/SubDir2/IMG_2061.JPG> .
+
+<bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir2/SubDir5.ttl>
+        a             ldp:Container ;
+        ldp:contains  <bag://TestPackageForCLI/data/bin/Collection4/Directory/SubDir2/SubDir5/testSimpleSynthesizedPD> .

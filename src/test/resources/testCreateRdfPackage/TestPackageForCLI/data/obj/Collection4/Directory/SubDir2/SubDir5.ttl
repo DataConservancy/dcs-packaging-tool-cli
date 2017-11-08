@@ -1,0 +1,7 @@
+@prefix bom:   <http://dataconservancy.org/business-object-model#> .
+
+<>      a                  bom:Collection ;
+        bom:hasCreateDate  "2016-02-28T04:02:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        bom:hasMetadata    <bag://TestPackageForCLI/data/bin/Collection4/Directory/SubDir2/SubDir5/testSimpleSynthesizedPD> ;
+        bom:hasTitle       "SubDir5" ;
+        bom:isMemberOf     <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir2.ttl> .

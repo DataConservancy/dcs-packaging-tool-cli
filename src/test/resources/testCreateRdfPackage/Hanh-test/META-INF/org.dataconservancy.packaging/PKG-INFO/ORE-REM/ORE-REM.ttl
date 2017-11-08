@@ -1,7 +1,0 @@
-@prefix ore:   <http://www.openarchives.org/ore/terms/> .
-
-<>      a              ore:ResourceMap ;
-        ore:describes  <#Aggregation> .
-
-<#Aggregation>  a       ore:Aggregation ;
-        ore:aggregates  <bag://Hanh-test/data/obj/To%20Print/IMG_9202.jpg.ttl> , <bag://Hanh-test/data/obj/To%20Print/IMG_9189.jpg.ttl> , <bag://Hanh-test/data/obj/To%20Print/IMG_9380.jpg.ttl> , <bag://Hanh-test/data/obj/To%20Print.ttl> , <bag://Hanh-test/data/obj/To%20Print/installers/DC%20Package%20Tool-1.0.2.dmg.ttl> , <bag://Hanh-test/data/obj/To%20Print/IMG_9455.jpg.ttl> , <bag://Hanh-test/data/obj/To%20Print/IMG_9184.jpg.ttl> , <bag://Hanh-test/data/obj/To%20Print/IMG_0960.jpg.ttl> , <bag://Hanh-test/data/obj/To%20Print/IMG_9313.jpg.ttl> , <bag://Hanh-test/data/obj/To%20Print/IMG_1159.jpg.ttl> , <bag://Hanh-test/data/obj/To%20Print/installers.ttl> , <bag://Hanh-test/data/obj/To%20Print/IMG_0899.jpg.ttl> , <bag://Hanh-test/data/obj/To%20Print/IMG_9321.jpg.ttl> , <bag://Hanh-test/data/obj/To%20Print/IMG_9342.jpg.ttl> , <bag://Hanh-test/data/obj/To%20Print/IMG_9302.jpg.ttl> , <bag://Hanh-test/data/obj/To%20Print/IMG_0858.jpg.ttl> .
