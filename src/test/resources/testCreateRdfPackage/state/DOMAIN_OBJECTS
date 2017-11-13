@@ -1,254 +1,128 @@
-<urn:uuid:1424ac26-711a-4202-a719-439e632159d2>
+<urn:uuid:f53002cf-8310-4456-864a-41ee3735b8d7>
         a       <http://dataconservancy.org/business-object-model#Metadata> ;
         <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2014-09-10T17:39:37Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                "2016-02-28T04:02:48Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
         <http://dataconservancy.org/business-object-model#hasFormat>
-                "info:pronom/fmt/43" , "image/jpeg" ;
+                "info:pronom/fmt/41" , "image/jpeg" ;
         <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2014-09-10T17:39:38Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                "2016-02-28T04:02:48Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
         <http://dataconservancy.org/business-object-model#hasSize>
-                "5718363"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                "2843551"^^<http://www.w3.org/2001/XMLSchema#long> ;
         <http://dataconservancy.org/business-object-model#hasTitle>
-                "IMG_0899.jpg" ;
+                "IMG_2061.JPG" ;
         <http://dataconservancy.org/business-object-model#metadataFor>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
+                <urn:uuid:9d64c277-9568-4fc1-a8f2-245227b16ea6> .
 
-<urn:uuid:b8e5b58b-c862-4b1d-9205-138541f8f7f7>
+<urn:uuid:a6c6a1e3-b30d-4bc6-ac9d-39814163d323>
         a       <http://dataconservancy.org/business-object-model#Metadata> ;
         <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2015-12-23T02:18:01Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasFormat>
-                "info:pronom/fmt/43" , "image/jpeg" ;
-        <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2015-12-23T02:18:01Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasSize>
-                "6247196"^^<http://www.w3.org/2001/XMLSchema#long> ;
-        <http://dataconservancy.org/business-object-model#hasTitle>
-                "IMG_9313.jpg" ;
-        <http://dataconservancy.org/business-object-model#metadataFor>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
-
-<urn:uuid:f6de992a-9015-4439-b32b-4560f401ac07>
-        a       <http://dataconservancy.org/business-object-model#Metadata> ;
-        <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2015-12-23T02:02:43Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasFormat>
-                "info:pronom/fmt/43" , "image/jpeg" ;
-        <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2015-12-23T02:02:43Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasSize>
-                "4813513"^^<http://www.w3.org/2001/XMLSchema#long> ;
-        <http://dataconservancy.org/business-object-model#hasTitle>
-                "IMG_9380.jpg" ;
-        <http://dataconservancy.org/business-object-model#metadataFor>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
-
-<urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59>
-        a       <http://dataconservancy.org/business-object-model#Collection> ;
-        <http://dataconservancy.org/business-object-model#hasContact>
-                [ a       <http://xmlns.com/foaf/0.1/person> ] ;
-        <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2014-09-10T04:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasCreator>
-                [ a       <http://xmlns.com/foaf/0.1/person> ] ;
-        <http://dataconservancy.org/business-object-model#hasMember>
-                <urn:uuid:565b3ab7-8bee-4666-9f3f-0a0221650e15> ;
-        <http://dataconservancy.org/business-object-model#hasMetadata>
-                <urn:uuid:312a3ac3-e7bb-48a2-aa54-18514a18284d> , <urn:uuid:e1f21e7b-56b2-42dc-83d2-a77f666ba5ba> , <urn:uuid:f6de992a-9015-4439-b32b-4560f401ac07> , <urn:uuid:75817a2d-218b-419e-a822-a5ea0142a3f7> , <urn:uuid:19748fc3-f776-44b5-b952-523cff4086b3> , <urn:uuid:001edf7f-ce2b-4bd3-9f73-cc5781de9697> , <urn:uuid:60d556a1-d6fb-4bb8-95c8-67a4ee16e382> , <urn:uuid:e8874a9f-8feb-44cc-8268-23e915f9a694> , <urn:uuid:5bf67cd9-cd86-406e-8bc5-ddaec21e8c35> , <urn:uuid:3fe6a343-ee8d-41cd-a8ea-8f2ac18de765> , <urn:uuid:e7f03dde-c1c2-48bc-877c-e064f6bbe5f6> , <urn:uuid:38f4987b-3326-4a19-a62b-6006d62e16ab> , <urn:uuid:b8e5b58b-c862-4b1d-9205-138541f8f7f7> , <urn:uuid:1424ac26-711a-4202-a719-439e632159d2> ;
-        <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2015-12-30T04:15:28Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasTitle>
-                "To Print" .
-
-<urn:uuid:e1f21e7b-56b2-42dc-83d2-a77f666ba5ba>
-        a       <http://dataconservancy.org/business-object-model#Metadata> ;
-        <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2015-12-23T02:17:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasFormat>
-                "info:pronom/fmt/43" , "image/jpeg" ;
-        <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2015-12-23T02:17:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasSize>
-                "4358654"^^<http://www.w3.org/2001/XMLSchema#long> ;
-        <http://dataconservancy.org/business-object-model#hasTitle>
-                "IMG_9321.jpg" ;
-        <http://dataconservancy.org/business-object-model#metadataFor>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
-
-<urn:uuid:e8874a9f-8feb-44cc-8268-23e915f9a694>
-        a       <http://dataconservancy.org/business-object-model#Metadata> ;
-        <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2015-12-23T02:21:29Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasFormat>
-                "info:pronom/fmt/43" , "image/jpeg" ;
-        <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2015-12-23T02:21:30Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasSize>
-                "4991733"^^<http://www.w3.org/2001/XMLSchema#long> ;
-        <http://dataconservancy.org/business-object-model#hasTitle>
-                "IMG_9189.jpg" ;
-        <http://dataconservancy.org/business-object-model#metadataFor>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
-
-<urn:uuid:19748fc3-f776-44b5-b952-523cff4086b3>
-        a       <http://dataconservancy.org/business-object-model#Metadata> ;
-        <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2015-12-23T02:20:35Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasFormat>
-                "info:pronom/fmt/43" , "image/jpeg" ;
-        <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2015-12-23T02:20:35Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasSize>
-                "6565477"^^<http://www.w3.org/2001/XMLSchema#long> ;
-        <http://dataconservancy.org/business-object-model#hasTitle>
-                "IMG_9184.jpg" ;
-        <http://dataconservancy.org/business-object-model#metadataFor>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
-
-<urn:uuid:a6a9155d-bed4-4b08-9724-c5c900797cba>
-        a       <http://dataconservancy.org/business-object-model#File> ;
-        <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2015-12-22T20:28:31Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                "2016-02-28T04:02:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
         <http://dataconservancy.org/business-object-model#hasFormat>
                 "application/octet-stream" ;
         <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2015-12-22T20:28:37Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                "2016-02-28T04:02:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
         <http://dataconservancy.org/business-object-model#hasSize>
-                "97350112"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                "5760"^^<http://www.w3.org/2001/XMLSchema#long> ;
         <http://dataconservancy.org/business-object-model#hasTitle>
-                "DC Package Tool-1.0.2.dmg" ;
+                "testSimpleSynthesizedPD" ;
+        <http://dataconservancy.org/business-object-model#metadataFor>
+                <urn:uuid:330e97bd-b9e8-4ddd-bc9a-46ce4946e989> .
+
+<urn:uuid:330e97bd-b9e8-4ddd-bc9a-46ce4946e989>
+        a       <http://dataconservancy.org/business-object-model#Collection> ;
+        <http://dataconservancy.org/business-object-model#hasCreateDate>
+                "2016-02-28T04:02:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://dataconservancy.org/business-object-model#hasMetadata>
+                <urn:uuid:a6c6a1e3-b30d-4bc6-ac9d-39814163d323> ;
+        <http://dataconservancy.org/business-object-model#hasTitle>
+                "SubDir5" ;
         <http://dataconservancy.org/business-object-model#isMemberOf>
-                <urn:uuid:565b3ab7-8bee-4666-9f3f-0a0221650e15> .
+                <urn:uuid:9d64c277-9568-4fc1-a8f2-245227b16ea6> .
 
-<urn:uuid:312a3ac3-e7bb-48a2-aa54-18514a18284d>
-        a       <http://dataconservancy.org/business-object-model#Metadata> ;
+<urn:uuid:9d64c277-9568-4fc1-a8f2-245227b16ea6>
+        a       <http://dataconservancy.org/business-object-model#Collection> ;
         <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2015-12-23T02:18:28Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasFormat>
-                "info:pronom/fmt/43" , "image/jpeg" ;
-        <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2015-12-23T02:18:28Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasSize>
-                "6022116"^^<http://www.w3.org/2001/XMLSchema#long> ;
-        <http://dataconservancy.org/business-object-model#hasTitle>
-                "IMG_9302.jpg" ;
-        <http://dataconservancy.org/business-object-model#metadataFor>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
-
-<urn:uuid:38f4987b-3326-4a19-a62b-6006d62e16ab>
-        a       <http://dataconservancy.org/business-object-model#Metadata> ;
-        <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2014-09-10T17:43:51Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasFormat>
-                "info:pronom/fmt/43" , "image/jpeg" ;
-        <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2014-09-10T17:43:51Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasSize>
-                "4029906"^^<http://www.w3.org/2001/XMLSchema#long> ;
-        <http://dataconservancy.org/business-object-model#hasTitle>
-                "IMG_1159.jpg" ;
-        <http://dataconservancy.org/business-object-model#metadataFor>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
-
-<urn:uuid:5bf67cd9-cd86-406e-8bc5-ddaec21e8c35>
-        a       <http://dataconservancy.org/business-object-model#Metadata> ;
-        <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2015-12-23T02:19:01Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasFormat>
-                "info:pronom/fmt/43" , "image/jpeg" ;
-        <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2015-12-23T02:19:01Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasSize>
-                "6609200"^^<http://www.w3.org/2001/XMLSchema#long> ;
-        <http://dataconservancy.org/business-object-model#hasTitle>
-                "IMG_9248.jpg" ;
-        <http://dataconservancy.org/business-object-model#metadataFor>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
-
-<urn:uuid:3fe6a343-ee8d-41cd-a8ea-8f2ac18de765>
-        a       <http://dataconservancy.org/business-object-model#Metadata> ;
-        <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2015-12-23T02:17:16Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasFormat>
-                "info:pronom/fmt/43" , "image/jpeg" ;
-        <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2015-12-23T02:17:16Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasSize>
-                "2839211"^^<http://www.w3.org/2001/XMLSchema#long> ;
-        <http://dataconservancy.org/business-object-model#hasTitle>
-                "IMG_9342.jpg" ;
-        <http://dataconservancy.org/business-object-model#metadataFor>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
-
-<urn:uuid:75817a2d-218b-419e-a822-a5ea0142a3f7>
-        a       <http://dataconservancy.org/business-object-model#Metadata> ;
-        <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2015-12-23T02:20:03Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasFormat>
-                "info:pronom/fmt/43" , "image/jpeg" ;
-        <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2015-12-23T02:20:03Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasSize>
-                "5758095"^^<http://www.w3.org/2001/XMLSchema#long> ;
-        <http://dataconservancy.org/business-object-model#hasTitle>
-                "IMG_9202.jpg" ;
-        <http://dataconservancy.org/business-object-model#metadataFor>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
-
-<urn:uuid:e7f03dde-c1c2-48bc-877c-e064f6bbe5f6>
-        a       <http://dataconservancy.org/business-object-model#Metadata> ;
-        <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2014-09-10T17:41:45Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasFormat>
-                "info:pronom/fmt/43" , "image/jpeg" ;
-        <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2014-09-10T17:41:46Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasSize>
-                "6437931"^^<http://www.w3.org/2001/XMLSchema#long> ;
-        <http://dataconservancy.org/business-object-model#hasTitle>
-                "IMG_0858.jpg" ;
-        <http://dataconservancy.org/business-object-model#metadataFor>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
-
-<urn:uuid:565b3ab7-8bee-4666-9f3f-0a0221650e15>
-        a       <http://dataconservancy.org/business-object-model#DataItem> ;
-        <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2015-12-22T20:37:13Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                "2016-02-28T04:02:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
         <http://dataconservancy.org/business-object-model#hasMember>
-                <urn:uuid:a6a9155d-bed4-4b08-9724-c5c900797cba> ;
-        <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2015-12-22T20:37:25Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                <urn:uuid:330e97bd-b9e8-4ddd-bc9a-46ce4946e989> ;
+        <http://dataconservancy.org/business-object-model#hasMetadata>
+                <urn:uuid:f53002cf-8310-4456-864a-41ee3735b8d7> ;
         <http://dataconservancy.org/business-object-model#hasTitle>
-                "installers" ;
+                "SubDir2" ;
         <http://dataconservancy.org/business-object-model#isMemberOf>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
+                <urn:uuid:b20fab03-83e0-4629-b892-39795cfaffe6> .
 
-<urn:uuid:60d556a1-d6fb-4bb8-95c8-67a4ee16e382>
+<urn:uuid:85c8121b-4498-4292-b01c-78d729ebca64>
+        a       <http://dataconservancy.org/business-object-model#Collection> ;
+        <http://dataconservancy.org/business-object-model#hasCreateDate>
+                "2016-02-28T04:02:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://dataconservancy.org/business-object-model#hasMember>
+                <urn:uuid:b20fab03-83e0-4629-b892-39795cfaffe6> , <urn:uuid:5b297a34-0b15-444e-86fc-633c42db91ca> ;
+        <http://dataconservancy.org/business-object-model#hasTitle>
+                "Collection4" .
+
+<urn:uuid:05cf70fb-1254-4c8b-95c8-0a013fafa94a>
         a       <http://dataconservancy.org/business-object-model#Metadata> ;
         <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2014-09-10T17:42:47Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                "2016-02-28T04:02:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
         <http://dataconservancy.org/business-object-model#hasFormat>
-                "info:pronom/fmt/43" , "image/jpeg" ;
+                "application/octet-stream" ;
         <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2014-09-10T17:42:47Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                "2016-02-28T04:02:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
         <http://dataconservancy.org/business-object-model#hasSize>
-                "8255112"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                "4649"^^<http://www.w3.org/2001/XMLSchema#long> ;
         <http://dataconservancy.org/business-object-model#hasTitle>
-                "IMG_0960.jpg" ;
+                "TestPDTwoCreators" ;
         <http://dataconservancy.org/business-object-model#metadataFor>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
+                <urn:uuid:b91b8e9e-f3b7-4f6f-8f38-98bed20aaada> .
 
-<urn:uuid:001edf7f-ce2b-4bd3-9f73-cc5781de9697>
-        a       <http://dataconservancy.org/business-object-model#Metadata> ;
+<urn:uuid:b91b8e9e-f3b7-4f6f-8f38-98bed20aaada>
+        a       <http://dataconservancy.org/business-object-model#Collection> ;
         <http://dataconservancy.org/business-object-model#hasCreateDate>
-                "2015-12-23T02:15:38Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasFormat>
-                "info:pronom/fmt/43" , "image/jpeg" ;
-        <http://dataconservancy.org/business-object-model#hasModifiedDate>
-                "2015-12-23T02:15:39Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        <http://dataconservancy.org/business-object-model#hasSize>
-                "7294566"^^<http://www.w3.org/2001/XMLSchema#long> ;
+                "2016-02-28T04:02:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://dataconservancy.org/business-object-model#hasMetadata>
+                <urn:uuid:05cf70fb-1254-4c8b-95c8-0a013fafa94a> ;
         <http://dataconservancy.org/business-object-model#hasTitle>
-                "IMG_9455.jpg" ;
-        <http://dataconservancy.org/business-object-model#metadataFor>
-                <urn:uuid:b82e36f5-0895-49ea-8c44-2a448172cd59> .
+                "SubDir4" ;
+        <http://dataconservancy.org/business-object-model#isMemberOf>
+                <urn:uuid:b2c94b69-b6f8-4c60-a6b4-d64f18659771> .
+
+<urn:uuid:b20fab03-83e0-4629-b892-39795cfaffe6>
+        a       <http://dataconservancy.org/business-object-model#Collection> ;
+        <http://dataconservancy.org/business-object-model#hasCreateDate>
+                "2016-02-28T04:02:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://dataconservancy.org/business-object-model#hasMember>
+                <urn:uuid:792d886a-5e2e-4bc5-b281-c8457b5c8a8f> , <urn:uuid:9d64c277-9568-4fc1-a8f2-245227b16ea6> , <urn:uuid:b2c94b69-b6f8-4c60-a6b4-d64f18659771> ;
+        <http://dataconservancy.org/business-object-model#hasTitle>
+                "Directory" ;
+        <http://dataconservancy.org/business-object-model#isMemberOf>
+                <urn:uuid:85c8121b-4498-4292-b01c-78d729ebca64> .
+
+<urn:uuid:b2c94b69-b6f8-4c60-a6b4-d64f18659771>
+        a       <http://dataconservancy.org/business-object-model#Collection> ;
+        <http://dataconservancy.org/business-object-model#hasCreateDate>
+                "2016-02-28T04:02:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://dataconservancy.org/business-object-model#hasMember>
+                <urn:uuid:b91b8e9e-f3b7-4f6f-8f38-98bed20aaada> ;
+        <http://dataconservancy.org/business-object-model#hasTitle>
+                "SubDir3" ;
+        <http://dataconservancy.org/business-object-model#isMemberOf>
+                <urn:uuid:b20fab03-83e0-4629-b892-39795cfaffe6> .
+
+<urn:uuid:792d886a-5e2e-4bc5-b281-c8457b5c8a8f>
+        a       <http://dataconservancy.org/business-object-model#Collection> ;
+        <http://dataconservancy.org/business-object-model#hasCreateDate>
+                "2016-02-28T04:02:48Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://dataconservancy.org/business-object-model#hasTitle>
+                "SubDir" ;
+        <http://dataconservancy.org/business-object-model#isMemberOf>
+                <urn:uuid:b20fab03-83e0-4629-b892-39795cfaffe6> .
+
+<urn:uuid:5b297a34-0b15-444e-86fc-633c42db91ca>
+        a       <http://dataconservancy.org/business-object-model#Collection> ;
+        <http://dataconservancy.org/business-object-model#hasCreateDate>
+                "2016-02-28T04:02:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://dataconservancy.org/business-object-model#hasTitle>
+                "Directory2" ;
+        <http://dataconservancy.org/business-object-model#isMemberOf>
+                <urn:uuid:85c8121b-4498-4292-b01c-78d729ebca64> .
