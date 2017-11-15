@@ -1,0 +1,13 @@
+Bag-Count: 1 of 1 
+Bag-Size: 3 MB 
+BagIt-Profile-Identifier: http://dataconservancy.org/formats/data-conservancy-pkg-1.0 
+Bagging-Date: 2017-11-07 
+Contact-Email: willard@jhu.edu 
+Contact-Name: Willard Sirk 
+Contact-Phone: +1 505-555-5555 
+Domain-Profile: http://dataconservancy.org/ptg-profiles/dcs-bo-1.0 
+Keyword: test 
+Keyword: data 
+Package-Name: TestPackageForCLI 
+Payload-Oxum: 2859647.14 
+Resource-Manifest: bag://TestPackageForCLI/META-INF/org.dataconservancy.packaging/PKG-INFO/ORE-REM/ORE-REM.ttl 

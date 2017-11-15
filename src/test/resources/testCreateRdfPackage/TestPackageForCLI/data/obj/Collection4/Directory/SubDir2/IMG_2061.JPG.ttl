@@ -1,0 +1,10 @@
+@prefix bom:   <http://dataconservancy.org/business-object-model#> .
+
+<bag://TestPackageForCLI/data/bin/Collection4/Directory/SubDir2/IMG_2061.JPG>
+        a                    bom:Metadata ;
+        bom:hasCreateDate    "2016-02-28T04:02:48Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        bom:hasFormat        "info:pronom/fmt/41" , "image/jpeg" ;
+        bom:hasModifiedDate  "2016-02-28T04:02:48Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        bom:hasSize          "2843551"^^<http://www.w3.org/2001/XMLSchema#long> ;
+        bom:hasTitle         "IMG_2061.JPG" ;
+        bom:metadataFor      <bag://TestPackageForCLI/data/obj/Collection4/Directory/SubDir2.ttl> .

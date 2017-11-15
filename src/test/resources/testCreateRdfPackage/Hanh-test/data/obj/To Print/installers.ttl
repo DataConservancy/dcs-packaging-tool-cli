@@ -1,8 +1,0 @@
-@prefix bom:   <http://dataconservancy.org/business-object-model#> .
-
-<>      a                    bom:DataItem ;
-        bom:hasCreateDate    "2015-12-22T20:37:13Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        bom:hasMember        <bag://Hanh-test/data/bin/To%20Print/installers/DC%20Package%20Tool-1.0.2.dmg> ;
-        bom:hasModifiedDate  "2015-12-22T20:37:25Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        bom:hasTitle         "installers" ;
-        bom:isMemberOf       <bag://Hanh-test/data/obj/To%20Print.ttl> .
